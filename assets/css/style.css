@@ -230,6 +230,7 @@ p { margin: 0 0 1em; }
 }
 .hero-full .wrap { grid-template-columns: 1fr; min-height: clamp(520px, 44vw, 680px); padding-top: 72px; padding-bottom: 72px; }
 .hero-full .hero-copy { max-width: 600px; }
+.hero-full .circuit-bg { opacity: .2; }
 .circuit-bg { position: absolute; inset: 0; opacity: .14; pointer-events: none; }
 
 /* Page hero (inner pages) */
