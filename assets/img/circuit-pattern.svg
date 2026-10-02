@@ -1,17 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="260" height="260" viewBox="0 0 260 260" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <!-- Seamless tile of embossed PCB traces: every trace ends in a pad or crosses an edge at a matching point -->
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="560" viewBox="0 0 560 560" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Sparse tile: three short embossed traces, each ending in pads at both ends -->
   <defs>
     <g id="t" stroke-width="1.6">
-      <path d="M34.5 40H104l26 26h58.5"/>
-      <circle cx="30" cy="40" r="4.5"/><circle cx="193" cy="66" r="4.5"/>
-      <path d="M52 190.5V156l26-26h45.5"/>
-      <circle cx="52" cy="195" r="4.5"/><circle cx="128" cy="130" r="4.5"/>
-      <path d="M198 124.5V176l-24 24h-34.5"/>
-      <circle cx="198" cy="120" r="4.5"/><circle cx="135" cy="200" r="4.5"/>
-      <path d="M0 240h78l12-12h66l12 12h92"/>
-      <path d="M240 0v78l-10 10v64l10 10v98"/>
-      <path d="M0 98h18l12 12h26.5"/><circle cx="61" cy="110" r="4.5"/>
-      <path d="M260 98h-20"/>
+      <path d="M64.5 90H150l28 28h52.5"/>
+      <circle cx="60" cy="90" r="4.5"/><circle cx="235" cy="118" r="4.5"/>
+      <path d="M400 315.5V370l-30 30h-60.5"/>
+      <circle cx="400" cy="311" r="4.5"/><circle cx="305" cy="400" r="4.5"/>
+      <path d="M114.5 470H170l20-20h34.5"/>
+      <circle cx="110" cy="470" r="4.5"/><circle cx="229" cy="450" r="4.5"/>
     </g>
   </defs>
   <use href="#t" stroke="#FFFFFF" stroke-opacity=".5" transform="translate(0 1.5)"/>

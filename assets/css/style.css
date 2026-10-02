@@ -60,7 +60,7 @@ body {
     var(--brushed),
     var(--sheen),
     linear-gradient(180deg, var(--silver-hi), var(--silver) 30%, #C2C9D2);
-  background-size: auto, auto, 260px 260px, auto, auto, auto;
+  background-size: auto, auto, 560px 560px, auto, auto, auto;
   -webkit-font-smoothing: antialiased;
 }
 img { max-width: 100%; display: block; }
@@ -264,7 +264,7 @@ p { margin: 0 0 1em; }
     var(--brushed),
     var(--sheen),
     linear-gradient(180deg, #C6CDD7, var(--silver-2));
-  background-size: auto, 260px 260px, auto, auto, auto;
+  background-size: auto, 560px 560px, auto, auto, auto;
   border-top: 1px solid rgba(255,255,255,.55);
   border-bottom: 1px solid rgba(15,40,80,.12);
 }
