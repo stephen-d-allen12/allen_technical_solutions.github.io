@@ -1,0 +1,52 @@
+title: Billing & Payments
+heading: Pay an Invoice
+lead: Pay securely by card, PayPal or bank transfer. You'll get an emailed receipt right away.
+nav: support
+crumb: Support|support.html
+description: Pay an Allen Technical Solutions invoice online by credit card, PayPal or ACH bank transfer.
+keywords: billing pay invoice payment credit card paypal ach bank transfer stripe receipt
+---
+<section class="section">
+  <div class="wrap split" style="align-items:start">
+    <div id="pay">
+      <form class="form-card form" data-mock-form>
+        <h3>Invoice payment</h3>
+        <div class="form-row">
+          <div class="field"><label for="b-inv">Invoice number</label><input id="b-inv" placeholder="ATS-0001" required></div>
+          <div class="field"><label for="b-amt">Amount (USD)</label><input id="b-amt" type="number" min="1" step="0.01" placeholder="0.00" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="b-name">Name or company</label><input id="b-name" required></div>
+          <div class="field"><label for="b-email">Email for receipt</label><input id="b-email" type="email" required></div>
+        </div>
+        <fieldset style="border:0;padding:0;margin:0">
+          <legend class="field" style="font-weight:600;font-size:.88rem;margin-bottom:6px">Payment method</legend>
+          <div class="pay-methods">
+            <label class="pay-method"><input type="radio" name="pm" checked><span>{{icon:card}}Card</span></label>
+            <label class="pay-method"><input type="radio" name="pm"><span>{{icon:wallet}}PayPal</span></label>
+            <label class="pay-method"><input type="radio" name="pm"><span>{{icon:bank}}ACH bank</span></label>
+          </div>
+        </fieldset>
+        <div class="field"><label for="b-card">Card details</label><input id="b-card" placeholder="Secure card field (Stripe) appears here" disabled></div>
+        <button class="btn btn-primary btn-block" type="submit">{{icon:lock}} Pay Securely</button>
+        <div class="secure-note">{{icon:shield}}Payments are processed by Stripe / PayPal. Card numbers never touch our servers.</div>
+        <div class="form-success">Preview only: no payment was taken. In WordPress this hands off to Stripe or PayPal checkout.</div>
+      </form>
+    </div>
+    <div>
+      <span class="eyebrow">Billing</span>
+      <h2>Billing questions</h2>
+      <ul class="check-list">
+        <li>Invoices are due net 15 unless your proposal says otherwise</li>
+        <li>Milestone billing for fixed-price projects</li>
+        <li>Monthly plans renew automatically and can be cancelled anytime</li>
+        <li>Need a W-9 or a PO number on your invoice? Just ask</li>
+      </ul>
+      <div class="panel" style="margin-top:24px">
+        <h3>Prefer to pay later or set up autopay?</h3>
+        <p>Log in to the client portal to see all invoices, download receipts and save a payment method.</p>
+        <a class="btn btn-primary" href="account.html">Client Portal {{icon:arrow}}</a>
+      </div>
+    </div>
+  </div>
+</section>

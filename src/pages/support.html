@@ -1,0 +1,68 @@
+title: Support
+heading: Help Center
+lead: Find answers, check service status or open a ticket with our team.
+nav: support
+description: Allen Technical Solutions customer support: knowledge base, FAQs, service status and support ticket form.
+keywords: support help center helpdesk ticket faq knowledge base troubleshooting contact support status
+---
+<section class="section section-dark" style="padding-top:0">
+  <div class="wrap">
+    <form class="support-search" action="search.html" method="get" role="search">
+      <label class="sr-only" for="kb-search">Search help articles</label>
+      <input id="kb-search" name="q" type="search" placeholder="Describe your issue, e.g. “reset password” or “invoice”">
+      <button type="submit" aria-label="Search">{{icon:search}}</button>
+    </form>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap grid grid-4">
+    <a class="card" href="#ticket"><div class="card-icon">{{icon:ticket}}</div><h3>Open a Ticket</h3><p>Get help from an engineer. Most replies within 4 business hours.</p></a>
+    <a class="card" href="#kb"><div class="card-icon">{{icon:book}}</div><h3>Knowledge Base</h3><p>Guides and answers to common questions.</p></a>
+    <a class="card" href="billing.html"><div class="card-icon">{{icon:card}}</div><h3>Billing Help</h3><p>Pay an invoice or update payment details.</p></a>
+    <a class="card" href="#status"><div class="card-icon">{{icon:clock}}</div><h3>System Status</h3><p><span class="status-pill">All systems operational</span></p></a>
+  </div>
+</section>
+<section class="section section-alt" id="kb">
+  <div class="wrap split" style="align-items:start">
+    <div>
+      <span class="eyebrow">Knowledge base</span>
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        <details><summary>How do I request a quote?</summary><p>Use the <a href="contact.html">contact form</a> or book a discovery call. We reply within one business day.</p></details>
+        <details><summary>What payment methods do you accept?</summary><p>Credit and debit cards, PayPal, and ACH bank transfer. See <a href="billing.html">Billing</a>.</p></details>
+        <details><summary>How do I log in to the client portal?</summary><p>Use the Client Login link at the top of any page. Contact support if you need a password reset.</p></details>
+        <details><summary>What's included in a Website Care Plan?</summary><p>Core and plugin updates, daily backups, uptime monitoring, security scans and an hour of content edits each month.</p></details>
+        <details><summary>Do you sign NDAs?</summary><p>Yes, we're happy to sign a mutual NDA before discussing project details.</p></details>
+        <details><summary>Who owns the code and drawings?</summary><p>You do. Ownership transfers on final payment, as written in every proposal.</p></details>
+      </div>
+    </div>
+    <div id="ticket">
+      <form class="form-card form" data-mock-form>
+        <h3>Open a support ticket</h3>
+        <div class="form-row">
+          <div class="field"><label for="t-name">Name</label><input id="t-name" required></div>
+          <div class="field"><label for="t-email">Email</label><input id="t-email" type="email" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="t-type">Category</label><select id="t-type"><option>Website</option><option>Software / App</option><option>Engineering</option><option>Billing</option><option>Other</option></select></div>
+          <div class="field"><label for="t-pri">Priority</label><select id="t-pri"><option>Normal</option><option>High</option><option>Urgent (system down)</option></select></div>
+        </div>
+        <div class="field"><label for="t-sub">Subject</label><input id="t-sub" required></div>
+        <div class="field"><label for="t-msg">Describe the issue</label><textarea id="t-msg" required></textarea></div>
+        <div class="field"><label for="t-file">Attachment (optional)</label><input id="t-file" type="file"></div>
+        <button class="btn btn-primary" type="submit">Submit Ticket</button>
+        <div class="form-success">Ticket received (preview only). In WordPress this goes to the helpdesk plugin and emails you a ticket number.</div>
+      </form>
+    </div>
+  </div>
+</section>
+<section class="section" id="status">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Status</span><h2>Service status</h2></div>
+    <div class="grid grid-3">
+      <div class="card"><h3>Client Portal</h3><span class="status-pill">Operational</span></div>
+      <div class="card"><h3>Hosted Websites</h3><span class="status-pill">Operational</span></div>
+      <div class="card"><h3>Payments</h3><span class="status-pill">Operational</span></div>
+    </div>
+  </div>
+</section>
