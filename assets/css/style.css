@@ -273,6 +273,7 @@ p { margin: 0 0 1em; }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .panel { background: var(--navy-900); border-radius: var(--radius-lg); padding: 36px; color: #fff; position: relative; overflow: hidden; }
 .panel p { color: #C9D5E8; }
+.panel .eyebrow { color: var(--blue-300); }
 
 /* Process steps */
 .steps { counter-reset: step; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }

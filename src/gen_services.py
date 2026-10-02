@@ -3,7 +3,7 @@ from pathlib import Path
 
 LINES = {
  "engineering": dict(title="Engineering Services", icon="cpu", nav="services",
-  lead="Electrical, mechanical and embedded engineering, real-time test systems and product validation, backed by 26+ years of automotive, industrial and transportation work.",
+  lead="Electrical, mechanical and embedded engineering, real-time test systems and product validation. Grounded in 26+ years of controls and test engineering and accelerated with modern AI-assisted tools.",
   kw="engineering electrical electronics mechanical embedded controls real-time test automation hil simulation calibration data acquisition instrumentation linux validation prototype pcb cad design analysis",
   items=[("design","ruler","Design &amp; Analysis","Requirements, concept design, calculations, CAD and simulation so decisions are made on numbers, not guesses.",["Requirements &amp; specifications","3D CAD and drawings","Load, thermal and tolerance analysis"]),
          ("electrical","bolt","Electrical &amp; Electronics","Circuit and PCB design, wiring and power distribution, and electronic hardware for products and test equipment.",["Schematics and PCB layout","Wiring harnesses and diagrams","Power and protection design"]),
@@ -25,7 +25,7 @@ LINES = {
          ("training","users","Training &amp; Mentoring","Hands-on training and coaching for your engineers on tools, systems and best practices.",["On-site or remote sessions","Custom curriculum","Engineer coaching and mentoring"]),
          ("process","gear","Process Improvement","Six Sigma-style improvement of engineering, test and release processes.",["Process mapping and metrics","Release-process improvement","Automation opportunities"])]),
  "software": dict(title="Software &amp; App Development", icon="code", nav="services",
-  lead="Custom software, mobile apps and automation that remove manual work and give you better data.",
+  lead="Custom software, mobile apps and automation that remove manual work and give you better data. Built with AI-assisted development and reviewed by an engineer before release.",
   kw="software development apps mobile ios android web app automation data cloud devops ai machine learning api integration",
   items=[("custom","code","Custom Software","Web applications, internal tools and APIs built around how your business actually works.",["Web apps and portals","APIs and integrations","Modernizing legacy tools"]),
          ("mobile","mobile","Mobile Apps","Cross-platform iOS and Android apps with offline support, notifications and payments.",["iOS and Android","Offline-first sync","App Store publishing"]),
@@ -33,7 +33,7 @@ LINES = {
          ("cloud","cloud","Cloud &amp; DevOps","Reliable, secure hosting with CI/CD, monitoring and backups set up properly from day one.",["AWS, Azure and GCP","CI/CD pipelines","Monitoring and backups"]),
          ("ai","layers","AI Integration","Practical AI features such as document processing, chat assistants and smart search.",["Assistants and chatbots","Document and data extraction","Model evaluation and guardrails"])]),
  "web-development": dict(title="Web Development", icon="globe", nav="services",
-  lead="Fast, secure WordPress websites and online stores that are easy to update and built to grow with your business.",
+  lead="Fast, secure WordPress websites and online stores that are easy to update and built to grow with your business. AI-assisted builds keep timelines short and prices fair.",
   kw="web development website design wordpress woocommerce ecommerce online store hosting maintenance seo speed",
   items=[("sites","globe","Business Websites","Professional, mobile-friendly sites that explain what you do and turn visitors into leads.",["Custom design on a block theme","Lead and quote forms","Analytics set up"]),
          ("ecommerce","cart","E-commerce Stores","WooCommerce stores with Stripe, PayPal, subscriptions, shipping and tax handled.",["Products, services and subscriptions","Stripe and PayPal checkout","Inventory and order emails"]),
