@@ -16,17 +16,19 @@
   --navy-900: #0B1424;
   --navy-800: #111E34;
   --navy-700: #1A2B47;
-  --slate-600: #4A5870;
-  --slate-500: #66748C;
+  --slate-600: #3A475C;
+  --slate-500: #4F5C72;
   --slate-300: #C3CCDA;
   --slate-200: #DDE4EE;
   --slate-100: #EEF2F8;
   --white: #FFFFFF;
   /* Light silver ground with a faint circuit pattern (replaces flat white) */
-  --silver: #E3E8EF;
-  --silver-2: #D7DEE8;
-  --silver-hi: #EEF1F5;
-  --card: #F7F9FC;
+  --silver: #C9CFD7;
+  --silver-2: #BCC4CF;
+  --silver-hi: #D5DAE1;
+  --card: #F1F4F8;
+  --sheen: linear-gradient(115deg, rgba(255,255,255,.22) 0%, rgba(255,255,255,0) 28%, rgba(255,255,255,.12) 52%, rgba(255,255,255,0) 78%);
+  --brushed: repeating-linear-gradient(90deg, rgba(255,255,255,.07) 0 1px, rgba(0,0,0,0) 1px 3px, rgba(40,55,80,.035) 3px 4px);
   --ink: #0E1726;
   --accent: #29C3FF;            /* circuit-node highlight */
   --success: #1F9D6B;
@@ -52,11 +54,13 @@ body {
   color: var(--ink);
   background-color: var(--silver);
   background-image:
-    radial-gradient(1400px 700px at 100% 0%, rgba(30,116,240,.10), transparent 60%),
-    radial-gradient(1000px 600px at 0% 100%, rgba(30,116,240,.07), transparent 60%),
+    radial-gradient(1200px 600px at 100% 0%, rgba(30,116,240,.14), transparent 60%),
+    radial-gradient(900px 600px at 0% 100%, rgba(30,116,240,.10), transparent 60%),
     url("../img/circuit-pattern.svg"),
-    linear-gradient(180deg, var(--silver-hi), var(--silver));
-  background-size: auto, auto, 220px 220px, auto;
+    var(--brushed),
+    var(--sheen),
+    linear-gradient(180deg, var(--silver-hi), var(--silver) 30%, #C2C9D2);
+  background-size: auto, auto, 260px 260px, auto, auto, auto;
   -webkit-font-smoothing: antialiased;
 }
 img { max-width: 100%; display: block; }
@@ -255,11 +259,14 @@ p { margin: 0 0 1em; }
 .section-alt {
   background-color: var(--silver-2);
   background-image:
-    linear-gradient(180deg, rgba(30,116,240,.06), rgba(30,116,240,.02)),
-    url("../img/circuit-pattern.svg");
-  background-size: auto, 220px 220px;
-  border-top: 1px solid rgba(255,255,255,.6);
-  border-bottom: 1px solid rgba(15,79,176,.08);
+    linear-gradient(180deg, rgba(30,116,240,.10), rgba(30,116,240,.04)),
+    url("../img/circuit-pattern.svg"),
+    var(--brushed),
+    var(--sheen),
+    linear-gradient(180deg, #C6CDD7, var(--silver-2));
+  background-size: auto, 260px 260px, auto, auto, auto;
+  border-top: 1px solid rgba(255,255,255,.55);
+  border-bottom: 1px solid rgba(15,40,80,.12);
 }
 .section-dark { background: var(--navy-900); color: #fff; }
 .section-dark p { color: #C9D5E8; }
@@ -316,7 +323,7 @@ p { margin: 0 0 1em; }
 .step p { color: var(--slate-600); font-size: .95rem; }
 
 /* Logos / trust strip */
-.trust { padding: 36px 0; border-bottom: 1px solid rgba(15,79,176,.10); background: rgba(255,255,255,.35); }
+.trust { padding: 36px 0; border-bottom: 1px solid rgba(15,40,80,.12); background: rgba(30,116,240,.05); }
 .trust .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 .trust-label { font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--slate-500); font-weight: 600; }
 .trust-items { display: flex; gap: 36px; flex-wrap: wrap; color: var(--slate-500); font-weight: 600; font-size: .95rem; }
