@@ -221,6 +221,15 @@ p { margin: 0 0 1em; }
 .hero-stats { display: flex; gap: 36px; margin-top: 40px; flex-wrap: wrap; }
 .hero-stats strong { display: block; font-family: var(--font-head); font-size: 2rem; color: #fff; line-height: 1; }
 .hero-stats span { font-size: .85rem; color: #9FB0CA; }
+/* Full-bleed hero: the logo artwork is the background, copy sits over the dark left side */
+.hero-full {
+  background:
+    linear-gradient(90deg, rgba(7,13,24,.92) 0%, rgba(7,13,24,.72) 34%, rgba(7,13,24,.15) 58%, rgba(7,13,24,0) 70%),
+    url("../img/hero-bg.jpg") right center / cover no-repeat,
+    var(--navy-950);
+}
+.hero-full .wrap { grid-template-columns: 1fr; min-height: clamp(520px, 44vw, 680px); padding-top: 72px; padding-bottom: 72px; }
+.hero-full .hero-copy { max-width: 600px; }
 .circuit-bg { position: absolute; inset: 0; opacity: .14; pointer-events: none; }
 
 /* Page hero (inner pages) */
@@ -447,6 +456,19 @@ p { margin: 0 0 1em; }
   .shop-sidebar { position: static; }
 }
 @media (min-width: 1025px) { .menu-close { display: none; } }
+/* Narrow screens: logo art sits centred at the top, copy below it */
+@media (max-width: 1024px) {
+  .hero-full {
+    background: url("../img/hero-mobile.jpg") center top / auto 400px no-repeat, var(--navy-950);
+  }
+  .hero.hero-full .wrap { min-height: 0; padding-top: 360px; padding-bottom: 64px; }
+}
+@media (max-width: 720px) {
+  .hero-full {
+    background: url("../img/hero-mobile.jpg") center top / auto 270px no-repeat, var(--navy-950);
+  }
+  .hero.hero-full .wrap { padding-top: 240px; }
+}
 @media (max-width: 720px) {
   .utility-tag { display: none; }
   .utility-links { gap: 14px; }
