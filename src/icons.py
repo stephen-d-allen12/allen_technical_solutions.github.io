@@ -59,16 +59,5 @@ def icon(name: str) -> str:
     )
 
 
-# Brand mark: the circuit-trace "A" from the logo, redrawn as vector.
-BRAND_MARK = """<svg class="brand-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-  <defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8DBBFF"/><stop offset="1" stop-color="#1E74F0"/></linearGradient></defs>
-  <g stroke="url(#bm)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="32" cy="8" r="4"/>
-    <path d="M30 11.5L12.5 48"/>
-    <path d="M36 12l15.5 34"/>
-    <circle cx="11" cy="52" r="4"/>
-    <circle cx="53" cy="50" r="4"/>
-    <path d="M20 33h11"/><circle cx="34.5" cy="33" r="3"/>
-    <path d="M15 46l7-8h14"/><circle cx="39.5" cy="38" r="3"/>
-  </g>
-</svg>"""
+# Brand mark: cropped straight from the logo artwork (assets/img/logo-mark.png).
+BRAND_MARK = '<img class="brand-mark" src="assets/img/logo-mark.png" width="176" height="160" alt="">'

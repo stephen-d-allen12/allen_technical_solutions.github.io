@@ -29,7 +29,7 @@ SHELL = """<!doctype html>
 <meta property="og:description" content="{description}">
 <meta property="og:image" content="assets/img/og-image.jpg">
 <meta name="theme-color" content="#0B1424">
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
