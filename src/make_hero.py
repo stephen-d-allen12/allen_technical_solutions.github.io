@@ -24,12 +24,7 @@ base.paste(Image.composite(im, base.crop((EXT, 0, EXT + W, H)), mask), (EXT, 0))
 # 2. traces, in original-art coordinates (x offset by EXT on the wide canvas)
 o = EXT
 traces = [
-    # left bundle continues down-left, then straight out to the left edge
-    [(1300, 500), (1240, 560), (0, 560)],
-    [(1320, 515), (1245, 590), (0, 590)],
-    [(1340, 530), (1250, 620), (0, 620)],
-    [(1360, 545), (1255, 650), (900, 650), (870, 680), (0, 680)],
-    [(1380, 560), (1260, 680), (1000, 680), (960, 720), (0, 720)],
+    # left bundle: five parallel traces from the left edge that fan up-right and land in a staggered pad row
     # upper-left: branches off the vertical traces above the A, out to the left edge
     [(1680, 150), (1560, 150), (1500, 210), (0, 210)],
     [(1690, 120), (1540, 120), (1480, 180), (800, 180), (760, 140), (0, 140)],
@@ -44,8 +39,35 @@ traces = [
     [(o + 1000, 790), (o + 1040, 830), (o + 1040, H)],
     [(500, 750), (440, 810), (440, H)],
 ]
-nodes = [(1680, 150), (1690, 120),
+# left bundle geometry: horizontal at y_i, 45-degree rise to a pad; spacing kept at 30px
+bundle_pads = []
+for i in range(5):
+    y = 560 + 30 * i
+    xt = 1180 + 12 * i            # keeps the 45-degree legs 30px apart
+    dx = 40 + 22 * i              # staggered lengths so pads sit in a row, not on top of each other
+    pad = (xt + dx, y - dx)
+    lead = [(0, y)]
+    if i == 3:
+        lead = [(0, 690), (860, 690), (900, 650)]
+    if i == 4:
+        lead = [(0, 730), (960, 730), (1010, 680)]
+    traces.append(lead + [(xt, y), pad])
+    bundle_pads.append(pad)
+
+nodes = bundle_pads + [(1680, 150), (1690, 120),
          (o + 1021, 420), (o + 990, 360), (o + 1283, 820), (o + 560, 790), (o + 1000, 790), (500, 750)]
+
+# stop each trace at the rim of its pad instead of running into the hole
+R = 9
+def trim(pts):
+    pts = list(pts)
+    for end, nxt in ((0, 1), (-1, -2)):
+        if pts[end] in nodes:
+            (x0, y0), (x1, y1) = pts[end], pts[nxt]
+            L = ((x1 - x0) ** 2 + (y1 - y0) ** 2) ** .5
+            pts[end] = (x0 + (x1 - x0) * R / L, y0 + (y1 - y0) * R / L)
+    return pts
+traces = [trim(t) for t in traces]
 
 layer = Image.new("RGBA", ((W + EXT) * S, H * S), (0, 0, 0, 0))
 d = ImageDraw.Draw(layer)
@@ -54,7 +76,7 @@ for t in traces:   # groove: dark shadow line, then a lit edge, like the embosse
     d.line(sc(t, 0, 2), fill=(0, 2, 6, 150), width=3 * S, joint="curve")
     d.line(sc(t), fill=(62, 88, 134, 150), width=2 * S, joint="curve")
 for x, y in nodes:
-    r = 9
+    r = R
     d.ellipse([((x - r) * S, (y - r + 2) * S), ((x + r) * S, (y + r + 2) * S)], outline=(0, 2, 6, 150), width=3 * S)
     d.ellipse([((x - r) * S, (y - r) * S), ((x + r) * S, (y + r) * S)], outline=(60, 86, 130, 140), width=2 * S)
 layer = layer.resize((W + EXT, H), Image.LANCZOS).filter(ImageFilter.GaussianBlur(0.4))
