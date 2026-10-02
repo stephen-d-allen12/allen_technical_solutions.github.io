@@ -4,7 +4,14 @@
   "url": "about.html",
   "summary": "About Allen Technical Solutions, our approach, values and the people behind the work.",
   "keywords": "about company team founder story mission values approach",
-  "text": "Who we are Built by an engineer, for people who build Allen Technical Solutions was founded to give businesses one dependable partner for the technical work that keeps them running and growing. Placeholder for the founder story: background, experience, certifications and why the company exists. Add a photo here in the WordPress build. Our approach How every project runs Listen Understand the real problem, not just the requested feature. Specify Write down requirements and acceptance criteria together. Deliver Build in visible increments with regular check-ins. Stand behind it Warranty period, documentation and ongoing support. Values What we hold ourselves to Integrity Honest estimates, and we tell you when something isn't worth building. Precision Measured results and work that is checked before it ships. Clarity Plain-language updates and documentation you can use. Craft Pride in clean designs, clean code and lasting solutions."
+  "text": "Who we are Built by an engineer, for people who build Allen Technical Solutions is led by Stephen D. Allen, an engineering and controls leader with 26+ years of experience across automotive, industrial and transportation engineering. Stephen has led global engineering teams, managed complex technical programs, and built real-time control systems, calibration strategies and automated test environments. He is known for reducing technical risk, improving product quality and turning customer requirements into engineering solutions that scale. B.S. Electrical & Communication Engineering, 3.92 GPA Six Sigma Green Belt projects in release and test processes Cybersecurity subject-matter expert for controls software releases Five years supporting OEMs across Central Europe from Germany Based in Indianapolis, Indiana. Connect on LinkedIn . Experience Career highlights 2025 \u2013 present Systems & Controls Engineering Specialist, Project Manager TRP Laboratories. Real-time test controls for automotive chassis and test cells; technical lead for controls, simulation, DAQ and software releases. 2024 \u2013 2025 Engineering Consultant Independent consulting on audio and video projects and custom test instrumentation. 2005 \u2013 2024 Cummins Inc. Embedded Controls Team Leader, Customer Engineering Technical Specialist (Germany), Controls Integration Leader, Controls Automated Test Leader, Senior Controls Test Engineer and Systems Engineer. Our approach How every project runs Listen Understand the real problem, not just the requested feature. Specify Write down requirements and acceptance criteria together. Deliver Build in visible increments with regular check-ins. Stand behind it Warranty period, documentation and ongoing support. Values What we hold ourselves to Integrity Honest estimates, and we tell you when something isn't worth building. Precision Measured results and work that is checked before it ships. Clarity Plain-language updates and documentation you can use. Craft Pride in clean designs, clean code and lasting solutions."
+ },
+ {
+  "title": "Career highlights \u00b7 About",
+  "url": "about.html#experience",
+  "summary": "highlights 2025 \u2013 present Systems & Controls Engineering Specialist, Project Manager TRP Laboratories. Real-time test controls for automotive chassis and test",
+  "keywords": "",
+  "text": "Experience Career highlights 2025 \u2013 present Systems & Controls Engineering Specialist, Project Manager TRP Laboratories. Real-time test controls for automotive chassis and test cells; technical lead for controls, simulation, DAQ and software releases. 2024 \u2013 2025 Engineering Consultant Independent consulting on audio and video projects and custom test instrumentation. 2005 \u2013 2024 Cummins Inc. Embedded Controls Team Leader, Customer Engineering Technical Specialist (Germany), Controls Integration Leader, Controls Automated Test Leader, Senior Controls Test Engineer and Systems Engineer."
  },
  {
   "title": "How every project runs \u00b7 About",
@@ -51,44 +58,44 @@
  {
   "title": "Technical Consulting",
   "url": "consulting.html",
-  "summary": "Independent technical advice that helps you decide what to build, how to build it and how to keep it on schedule.",
-  "keywords": "consulting advisory strategy feasibility project management compliance standards training owner's engineer",
-  "text": "Capabilities What's included Engage us for a single task or the whole project. Every engagement starts with a free discovery call and a written proposal. Technical Strategy Technology roadmaps, build-vs-buy decisions and vendor selection grounded in your business goals. Technology roadmaps Build vs. buy analysis Vendor and tool selection Feasibility Studies Cost, risk and technical feasibility reviews before you invest in a new product or system. Cost and ROI estimates Risk registers Go / no-go recommendations Project Management Owner's-representative and project management services that keep vendors aligned and on budget. Schedules and milestones Vendor coordination Change and budget control Standards & Compliance Guidance on codes and standards such as NEC, UL, ISO and accessibility requirements. Gap assessments Documentation packages Audit preparation Training & Workshops Hands-on training for your team on tools, systems and engineering best practices. On-site or remote sessions Custom curriculum Recorded material for onboarding Get started Tell us about your project Share a few details and we'll reply within one business day with questions, a rough budget range and next steps. Request a Quote Engagement models Pick how you want to work Fixed-price project Defined scope, milestones and a firm price. Best when requirements are clear. Time & materials Hourly or daily rate with weekly reporting. Best for R&D and evolving scope. Monthly retainer Reserved hours each month for ongoing improvements, support and advice."
+  "summary": "Engineering leadership on demand: program management, technical strategy and standards expertise from someone who has led global controls teams.",
+  "keywords": "consulting advisory strategy program project management requirements specifications functional safety cybersecurity iso iec six sigma training mentoring",
+  "text": "Capabilities What's included Engage us for a single task or the whole project. Every engagement starts with a free discovery call and a written proposal. Technical Strategy Platform and architecture decisions, build-vs-buy choices and roadmaps grounded in what your product must do. Architecture and platform roadmaps Build vs. buy analysis Vendor and tool selection Requirements & Specifications Turning customer and OEM needs into clear technical requirements and specifications your team can build to. Customer and OEM requirements Technical specifications Design reviews Program & Project Management Technical project leadership that keeps scope, schedule, releases and stakeholders aligned. Schedules, milestones and releases Cross-functional and global teams Risk management Functional Safety & Cybersecurity Practical guidance on ISO and IEC standards, functional safety and cybersecurity for software releases. ISO / IEC standards alignment Cybersecurity release reviews Audit and documentation support Training & Process Improvement Mentoring, team training and Six Sigma-style process improvement for engineering organizations. Controls and test training Engineer coaching and mentoring Release-process improvement Get started Tell us about your project Share a few details and we'll reply within one business day with questions, a rough budget range and next steps. Request a Quote Engagement models Pick how you want to work Fixed-price project Defined scope, milestones and a firm price. Best when requirements are clear. Time & materials Hourly or daily rate with weekly reporting. Best for R&D and evolving scope. Monthly retainer Reserved hours each month for ongoing improvements, support and advice."
  },
  {
   "title": "Technical Strategy \u00b7 Technical Consulting",
   "url": "consulting.html#strategy",
-  "summary": "Technology roadmaps, build-vs-buy decisions and vendor selection grounded in your business goals. Technology roadmaps Build vs. buy analysis Vendor and tool se",
+  "summary": "Platform and architecture decisions, build-vs-buy choices and roadmaps grounded in what your product must do. Architecture and platform roadmaps Build vs. buy",
   "keywords": "",
-  "text": "Technical Strategy Technology roadmaps, build-vs-buy decisions and vendor selection grounded in your business goals. Technology roadmaps Build vs. buy analysis Vendor and tool selection"
+  "text": "Technical Strategy Platform and architecture decisions, build-vs-buy choices and roadmaps grounded in what your product must do. Architecture and platform roadmaps Build vs. buy analysis Vendor and tool selection"
  },
  {
-  "title": "Feasibility Studies \u00b7 Technical Consulting",
-  "url": "consulting.html#feasibility",
-  "summary": "Cost, risk and technical feasibility reviews before you invest in a new product or system. Cost and ROI estimates Risk registers Go / no-go recommendations",
+  "title": "Requirements & Specifications \u00b7 Technical Consulting",
+  "url": "consulting.html#requirements",
+  "summary": "Turning customer and OEM needs into clear technical requirements and specifications your team can build to. Customer and OEM requirements Technical specificati",
   "keywords": "",
-  "text": "Feasibility Studies Cost, risk and technical feasibility reviews before you invest in a new product or system. Cost and ROI estimates Risk registers Go / no-go recommendations"
+  "text": "Requirements & Specifications Turning customer and OEM needs into clear technical requirements and specifications your team can build to. Customer and OEM requirements Technical specifications Design reviews"
  },
  {
-  "title": "Project Management \u00b7 Technical Consulting",
+  "title": "Program & Project Management \u00b7 Technical Consulting",
   "url": "consulting.html#project-management",
-  "summary": "Owner's-representative and project management services that keep vendors aligned and on budget. Schedules and milestones Vendor coordination Change and budget",
+  "summary": "Technical project leadership that keeps scope, schedule, releases and stakeholders aligned. Schedules, milestones and releases Cross-functional and global team",
   "keywords": "",
-  "text": "Project Management Owner's-representative and project management services that keep vendors aligned and on budget. Schedules and milestones Vendor coordination Change and budget control"
+  "text": "Program & Project Management Technical project leadership that keeps scope, schedule, releases and stakeholders aligned. Schedules, milestones and releases Cross-functional and global teams Risk management"
  },
  {
-  "title": "Standards & Compliance \u00b7 Technical Consulting",
+  "title": "Functional Safety & Cybersecurity \u00b7 Technical Consulting",
   "url": "consulting.html#compliance",
-  "summary": "Guidance on codes and standards such as NEC, UL, ISO and accessibility requirements. Gap assessments Documentation packages Audit preparation",
+  "summary": "Practical guidance on ISO and IEC standards, functional safety and cybersecurity for software releases. ISO / IEC standards alignment Cybersecurity release rev",
   "keywords": "",
-  "text": "Standards & Compliance Guidance on codes and standards such as NEC, UL, ISO and accessibility requirements. Gap assessments Documentation packages Audit preparation"
+  "text": "Functional Safety & Cybersecurity Practical guidance on ISO and IEC standards, functional safety and cybersecurity for software releases. ISO / IEC standards alignment Cybersecurity release reviews Audit and documentation support"
  },
  {
-  "title": "Training & Workshops \u00b7 Technical Consulting",
+  "title": "Training & Process Improvement \u00b7 Technical Consulting",
   "url": "consulting.html#training",
-  "summary": "Hands-on training for your team on tools, systems and engineering best practices. On-site or remote sessions Custom curriculum Recorded material for onboarding",
+  "summary": "Mentoring, team training and Six Sigma-style process improvement for engineering organizations. Controls and test training Engineer coaching and mentoring Rele",
   "keywords": "",
-  "text": "Training & Workshops Hands-on training for your team on tools, systems and engineering best practices. On-site or remote sessions Custom curriculum Recorded material for onboarding Get started Tell us about your project Share a few details and we'll reply within one business day with questions, a rough budget range and next steps. Request a Quote Engagement models Pick how you want to work Fixed-price project Defined scope, milestones and a firm price. Best when requirements are clear. Time & materials Hourly or daily rate with weekly reporting. Best for R&D and evolving scope. Monthly retainer Reserved hours each month for ongoing improvements, support and advice."
+  "text": "Training & Process Improvement Mentoring, team training and Six Sigma-style process improvement for engineering organizations. Controls and test training Engineer coaching and mentoring Release-process improvement Get started Tell us about your project Share a few details and we'll reply within one business day with questions, a rough budget range and next steps. Request a Quote Engagement models Pick how you want to work Fixed-price project Defined scope, milestones and a firm price. Best when requirements are clear. Time & materials Hourly or daily rate with weekly reporting. Best for R&D and evolving scope. Monthly retainer Reserved hours each month for ongoing improvements, support and advice."
  },
  {
   "title": "Contact",
@@ -107,128 +114,107 @@
  {
   "title": "Engineering Services",
   "url": "engineering.html",
-  "summary": "Electrical, mechanical and embedded engineering, from first sketch to tested prototype and production-ready documentation.",
-  "keywords": "engineering electrical mechanical embedded iot cad pcb controls plc prototype testing design analysis",
-  "text": "Capabilities What's included Engage us for a single task or the whole project. Every engagement starts with a free discovery call and a written proposal. Design & Analysis Requirements, concept design, calculations, CAD and simulation so decisions are made on numbers, not guesses. Requirements & specifications 3D CAD and drawings Load, thermal and tolerance analysis Electrical & Controls Control panels, PLC programming, wiring diagrams and power distribution for machines and facilities. Schematics & panel layouts PLC / HMI programming Power and protection studies Mechanical & Product Enclosures, fixtures, mechanisms and consumer products designed for manufacture and assembly. DFM / DFA reviews Enclosures and fixtures Bill of materials and sourcing Embedded & IoT Microcontroller firmware, PCB design and connected devices that report to the cloud. PCB schematic and layout Firmware in C/C++ and Rust Sensor networks and telemetry Prototyping & Test Rapid prototypes, test fixtures and validation plans that prove the design before you commit. 3D printed and machined prototypes Test plans and reports Root-cause failure analysis Get started Tell us about your project Share a few details and we'll reply within one business day with questions, a rough budget range and next steps. Request a Quote Engagement models Pick how you want to work Fixed-price project Defined scope, milestones and a firm price. Best when requirements are clear. Time & materials Hourly or daily rate with weekly reporting. Best for R&D and evolving scope. Monthly retainer Reserved hours each month for ongoing improvements, support and advice."
+  "summary": "Embedded controls, real-time test systems and product validation, backed by 26+ years of automotive, industrial and transportation engineering.",
+  "keywords": "engineering embedded controls real-time test automation hil simulation calibration data acquisition instrumentation linux validation functional safety",
+  "text": "Capabilities What's included Engage us for a single task or the whole project. Every engagement starts with a free discovery call and a written proposal. Embedded Controls Low-level and advanced control software, from requirements through release, built to ISO and IEC standards. Control strategy and software design Integration and troubleshooting Release and change management Test Automation & HIL Automated test environments and hardware-in-the-loop simulators that find problems before the field does. HIL and vehicle simulators Closed-loop test automation Simulation models and libraries Real-Time & Linux Systems Hardware-agnostic, real-time control platforms on Linux with industrial communications and custom I/O. Real-time test-cell controls Industrial communications and custom I/O Machine safety integration Data Acquisition & Instrumentation Custom test instrumentation, data loggers and DAQ systems for the lab, the test cell or the field. Field test data loggers Sensor and signal conditioning Audio and video test setups Calibration & Validation Calibration development and product validation plans that prove performance, quality and compliance. Calibration strategies and values Validation and acceptance testing Functional safety and cybersecurity reviews Get started Tell us about your project Share a few details and we'll reply within one business day with questions, a rough budget range and next steps. Request a Quote Engagement models Pick how you want to work Fixed-price project Defined scope, milestones and a firm price. Best when requirements are clear. Time & materials Hourly or daily rate with weekly reporting. Best for R&D and evolving scope. Monthly retainer Reserved hours each month for ongoing improvements, support and advice."
  },
  {
-  "title": "Design & Analysis \u00b7 Engineering Services",
-  "url": "engineering.html#design",
-  "summary": "Requirements, concept design, calculations, CAD and simulation so decisions are made on numbers, not guesses. Requirements & specifications 3D CAD and drawings",
-  "keywords": "",
-  "text": "Design & Analysis Requirements, concept design, calculations, CAD and simulation so decisions are made on numbers, not guesses. Requirements & specifications 3D CAD and drawings Load, thermal and tolerance analysis"
- },
- {
-  "title": "Electrical & Controls \u00b7 Engineering Services",
-  "url": "engineering.html#electrical",
-  "summary": "Control panels, PLC programming, wiring diagrams and power distribution for machines and facilities. Schematics & panel layouts PLC / HMI programming Power and",
-  "keywords": "",
-  "text": "Electrical & Controls Control panels, PLC programming, wiring diagrams and power distribution for machines and facilities. Schematics & panel layouts PLC / HMI programming Power and protection studies"
- },
- {
-  "title": "Mechanical & Product \u00b7 Engineering Services",
-  "url": "engineering.html#mechanical",
-  "summary": "Enclosures, fixtures, mechanisms and consumer products designed for manufacture and assembly. DFM / DFA reviews Enclosures and fixtures Bill of materials and s",
-  "keywords": "",
-  "text": "Mechanical & Product Enclosures, fixtures, mechanisms and consumer products designed for manufacture and assembly. DFM / DFA reviews Enclosures and fixtures Bill of materials and sourcing"
- },
- {
-  "title": "Embedded & IoT \u00b7 Engineering Services",
+  "title": "Embedded Controls \u00b7 Engineering Services",
   "url": "engineering.html#embedded",
-  "summary": "Microcontroller firmware, PCB design and connected devices that report to the cloud. PCB schematic and layout Firmware in C/C++ and Rust Sensor networks and te",
+  "summary": "Low-level and advanced control software, from requirements through release, built to ISO and IEC standards. Control strategy and software design Integration an",
   "keywords": "",
-  "text": "Embedded & IoT Microcontroller firmware, PCB design and connected devices that report to the cloud. PCB schematic and layout Firmware in C/C++ and Rust Sensor networks and telemetry"
+  "text": "Embedded Controls Low-level and advanced control software, from requirements through release, built to ISO and IEC standards. Control strategy and software design Integration and troubleshooting Release and change management"
  },
  {
-  "title": "Prototyping & Test \u00b7 Engineering Services",
-  "url": "engineering.html#prototyping",
-  "summary": "Rapid prototypes, test fixtures and validation plans that prove the design before you commit. 3D printed and machined prototypes Test plans and reports Root-ca",
+  "title": "Test Automation & HIL \u00b7 Engineering Services",
+  "url": "engineering.html#test-automation",
+  "summary": "Automated test environments and hardware-in-the-loop simulators that find problems before the field does. HIL and vehicle simulators Closed-loop test automatio",
   "keywords": "",
-  "text": "Prototyping & Test Rapid prototypes, test fixtures and validation plans that prove the design before you commit. 3D printed and machined prototypes Test plans and reports Root-cause failure analysis Get started Tell us about your project Share a few details and we'll reply within one business day with questions, a rough budget range and next steps. Request a Quote Engagement models Pick how you want to work Fixed-price project Defined scope, milestones and a firm price. Best when requirements are clear. Time & materials Hourly or daily rate with weekly reporting. Best for R&D and evolving scope. Monthly retainer Reserved hours each month for ongoing improvements, support and advice."
+  "text": "Test Automation & HIL Automated test environments and hardware-in-the-loop simulators that find problems before the field does. HIL and vehicle simulators Closed-loop test automation Simulation models and libraries"
+ },
+ {
+  "title": "Real-Time & Linux Systems \u00b7 Engineering Services",
+  "url": "engineering.html#realtime",
+  "summary": "Hardware-agnostic, real-time control platforms on Linux with industrial communications and custom I/O. Real-time test-cell controls Industrial communications a",
+  "keywords": "",
+  "text": "Real-Time & Linux Systems Hardware-agnostic, real-time control platforms on Linux with industrial communications and custom I/O. Real-time test-cell controls Industrial communications and custom I/O Machine safety integration"
+ },
+ {
+  "title": "Data Acquisition & Instrumentation \u00b7 Engineering Services",
+  "url": "engineering.html#daq",
+  "summary": "Custom test instrumentation, data loggers and DAQ systems for the lab, the test cell or the field. Field test data loggers Sensor and signal conditioning Audio",
+  "keywords": "",
+  "text": "Data Acquisition & Instrumentation Custom test instrumentation, data loggers and DAQ systems for the lab, the test cell or the field. Field test data loggers Sensor and signal conditioning Audio and video test setups"
+ },
+ {
+  "title": "Calibration & Validation \u00b7 Engineering Services",
+  "url": "engineering.html#validation",
+  "summary": "Calibration development and product validation plans that prove performance, quality and compliance. Calibration strategies and values Validation and acceptanc",
+  "keywords": "",
+  "text": "Calibration & Validation Calibration development and product validation plans that prove performance, quality and compliance. Calibration strategies and values Validation and acceptance testing Functional safety and cybersecurity reviews Get started Tell us about your project Share a few details and we'll reply within one business day with questions, a rough budget range and next steps. Request a Quote Engagement models Pick how you want to work Fixed-price project Defined scope, milestones and a firm price. Best when requirements are clear. Time & materials Hourly or daily rate with weekly reporting. Best for R&D and evolving scope. Monthly retainer Reserved hours each month for ongoing improvements, support and advice."
  },
  {
   "title": "Allen Technical Solutions | Engineering, Consulting & Software",
   "url": "index.html",
   "summary": "Engineering services, technical consulting, custom software, mobile apps and web development for businesses that build things.",
   "keywords": "home engineering firm consulting software apps websites",
-  "text": "Engineering \u00b7 Consulting \u00b7 Software Engineered solutions, built to perform. Allen Technical Solutions designs, builds and supports the systems your business runs on, from hardware and controls to software, apps and the websites that sell them. Request a Quote Explore Services 4 Core service lines 1 day Response on new inquiries 100% Documented deliverables How we work Licensed & insured Fixed-price proposals NDA on request Ongoing support plans What we do One partner from concept to launch Most projects need more than one discipline. We bring engineering, consulting and software under one roof so nothing gets lost in the hand-off. Engineering Services Electrical, mechanical and embedded design, analysis, prototyping and test. Learn more Technical Consulting Feasibility studies, technical strategy, project management and compliance. Learn more Software & Apps Custom software, mobile apps, automation, data tools and AI integration. Learn more Web Development WordPress sites, e-commerce stores, hosting, care plans and SEO. Learn more Why Allen Technical Solutions Engineering discipline applied to every deliverable We treat a website with the same rigor as a control panel: requirements first, a clear design, testing before hand-off, and documentation you can actually use. Written scope, schedule and price before work starts Weekly progress updates in your client portal You own the drawings, source code and accounts Support and maintenance plans after launch Our Approach Precise Specs, tolerances and acceptance criteria defined up front. Fast Small team, short decision loops, rapid prototypes. Reliable Tested, documented and built to standards. Personal You talk to the engineer doing the work. Our process From first call to finished product Discover A free call to understand the goal, constraints and budget. Define A written proposal with scope, milestones and a firm price. Build Design, develop and test in short, visible iterations. Support Launch, train your team and keep it running. Featured work Recent projects All Projects Engineering Production line monitoring Sensor retrofit and dashboard that cut unplanned downtime on a packaging line. Software Field service mobile app Offline-first iOS/Android app for technicians with photo reports and e-signature. Web WooCommerce parts store Catalog of 2,000 SKUs with Stripe checkout and automated invoicing. Client feedback What clients say \u201cPlaceholder testimonial. Clear communication, delivered on schedule, and the documentation was better than anything we had in-house.\u201d Client name Operations Manager, Company \u201cPlaceholder testimonial. They understood both the hardware and the software side, which saved us from hiring two firms.\u201d Client name Founder, Startup \u201cPlaceholder testimonial. Our new site loads fast, takes payments, and we can update it ourselves.\u201d Client name Owner, Small Business Customer Support Search the knowledge base, check system status or open a ticket. Help Center Billing & Payments Pay a"
+  "text": "Engineering \u00b7 Consulting \u00b7 Software Engineered solutions, built to perform. Embedded controls, real-time test systems and validation, plus the software, apps and websites your business runs on. Led by an engineer with 26+ years across automotive, industrial and transportation programs. Request a Quote Explore Services 26+ Years of engineering 1 day Response on new inquiries US & EU Global customer support How we work 26+ years in engineering Fixed-price proposals NDA on request Ongoing support plans What we do One partner from concept to launch Most projects need more than one discipline. We bring engineering, consulting and software under one roof so nothing gets lost in the hand-off. Engineering Services Embedded controls, test automation, HIL simulation, data acquisition and validation. Learn more Technical Consulting Technical strategy, program management, requirements, functional safety and cybersecurity. Learn more Software & Apps Custom software, mobile apps, automation, data tools and AI integration. Learn more Web Development WordPress sites, e-commerce stores, hosting, care plans and SEO. Learn more Why Allen Technical Solutions Engineering discipline applied to every deliverable We treat a website with the same rigor as a controls release: requirements first, a clear design, testing before hand-off, and documentation you can actually use. Written scope, schedule and price before work starts Weekly progress updates in your client portal You own the drawings, source code and accounts Support and maintenance plans after launch Our Approach Precise Specs, tolerances and acceptance criteria defined up front. Fast Small team, short decision loops, rapid prototypes. Reliable Tested, documented and built to standards. Personal You talk to the engineer doing the work. Our process From first call to finished product Discover A free call to understand the goal, constraints and budget. Define A written proposal with scope, milestones and a firm price. Build Design, develop and test in short, visible iterations. Support Launch, train your team and keep it running. Experience Selected work All Projects Engineering Real-time test-cell controls Linux-based real-time control platforms for automotive chassis and engine test cells. Engineering HIL & vehicle simulators Hardware-in-the-loop and vehicle simulators that catch control issues before the field. Consulting OEM controls integration Five years supporting OEMs across Central Europe with specifications and integration. Client feedback What clients say \u201cPlaceholder testimonial. Clear communication, delivered on schedule, and the documentation was better than anything we had in-house.\u201d Client name Operations Manager, Company \u201cPlaceholder testimonial. They understood both the hardware and the software side, which saved us from hiring two firms.\u201d Client name Founder, Startup \u201cPlaceholder testimonial. Our new site loads fast, takes payments, and we can update it ourselves.\u201d Client name Owner, Small Busin"
  },
  {
   "title": "One partner from concept to launch \u00b7 Allen Technical Solutions | Engineering, Consulting & Software",
   "url": "index.html#services",
   "summary": "t to launch Most projects need more than one discipline. We bring engineering, consulting and software under one roof so nothing gets lost in the hand-off. Engi",
   "keywords": "",
-  "text": "What we do One partner from concept to launch Most projects need more than one discipline. We bring engineering, consulting and software under one roof so nothing gets lost in the hand-off. Engineering Services Electrical, mechanical and embedded design, analysis, prototyping and test. Learn more Technical Consulting Feasibility studies, technical strategy, project management and compliance. Learn more Software & Apps Custom software, mobile apps, automation, data tools and AI integration. Learn more Web Development WordPress sites, e-commerce stores, hosting, care plans and SEO. Learn more Why Allen Technical Solutions Engineering discipline applied to every deliverable We treat a website with the same rigor as a control panel: requirements first, a clear design, testing before hand-off, and documentation you can actually use. Written scope, schedule and price before work starts Weekly progress updates in your client portal You own the drawings, source code and accounts Support and maintenance plans after launch Our Approach Precise Specs, tolerances and acceptance criteria defined up front. Fast Small team, short decision loops, rapid prototypes. Reliable Tested, documented and built to standards. Personal You talk to the engineer doing the work. Our process From first call to finished product Discover A free call to understand the goal, constraints and budget. Define A written proposal with scope, milestones and a firm price. Build Design, develop and test in short, visibl"
+  "text": "What we do One partner from concept to launch Most projects need more than one discipline. We bring engineering, consulting and software under one roof so nothing gets lost in the hand-off. Engineering Services Embedded controls, test automation, HIL simulation, data acquisition and validation. Learn more Technical Consulting Technical strategy, program management, requirements, functional safety and cybersecurity. Learn more Software & Apps Custom software, mobile apps, automation, data tools and AI integration. Learn more Web Development WordPress sites, e-commerce stores, hosting, care plans and SEO. Learn more Why Allen Technical Solutions Engineering discipline applied to every deliverable We treat a website with the same rigor as a controls release: requirements first, a clear design, testing before hand-off, and documentation you can actually use. Written scope, schedule and price before work starts Weekly progress updates in your client portal You own the drawings, source code and accounts Support and maintenance plans after launch Our Approach Precise Specs, tolerances and acceptance criteria defined up front. Fast Small team, short decision loops, rapid prototypes. Reliable Tested, documented and built to standards. Personal You talk to the engineer doing the work. Our process From first call to finished product Discover A free call to understand the goal, constraints and budget. Define A written proposal with scope, milestones and a firm price. Build Design, develo"
  },
  {
   "title": "Industries",
   "url": "industries.html",
-  "summary": "Industries served by Allen Technical Solutions including manufacturing, energy, transportation, construction, retail, aerospace, medical devices and startups.",
-  "keywords": "industries sectors markets clients",
-  "text": "Manufacturing Machine controls, line monitoring, fixtures and MES integrations that raise throughput. Energy & Utilities Monitoring, SCADA dashboards, solar and battery system design support. Transportation Fleet telematics, routing tools and maintenance tracking apps. Small Business Websites, online booking, payments and the automation that saves hours every week. Construction & AEC Estimating tools, field apps, document control and BIM-adjacent workflows. Retail & E-commerce WooCommerce stores, inventory sync, POS integrations and fulfillment automation. Aerospace & Defense Test fixtures, data acquisition and documentation to demanding standards. Medical Devices Embedded firmware, test equipment and design-history documentation support. Startups & R&D MVPs, proofs of concept and investor-ready prototypes on a startup budget."
+  "summary": "Industries served by Allen Technical Solutions including automotive and engines, commercial vehicles, industrial automation, test labs, small business and startups.",
+  "keywords": "industries sectors markets clients automotive engines diesel commercial vehicles industrial test labs",
+  "text": "Automotive & Engines Engine and powertrain controls, calibration and validation for OEMs and suppliers in North America and Europe. Commercial Vehicles Controls integration, vehicle simulators and field data logging for on-highway and off-highway equipment. Industrial Automation Real-time control platforms, industrial communications, custom I/O and machine safety. Test & Measurement Labs Test-cell and chassis-dyno controls, HIL simulation, data acquisition and automated test environments. Small Business Websites, online payments, customer support tools and the automation that saves hours every week. Startups & R&D Proofs of concept, test instrumentation and engineering leadership without a full-time hire."
  },
  {
-  "title": "Manufacturing \u00b7 Industries",
-  "url": "industries.html#manufacturing",
-  "summary": "Machine controls, line monitoring, fixtures and MES integrations that raise throughput.",
+  "title": "Automotive & Engines \u00b7 Industries",
+  "url": "industries.html#automotive",
+  "summary": "Engine and powertrain controls, calibration and validation for OEMs and suppliers in North America and Europe.",
   "keywords": "",
-  "text": "Manufacturing Machine controls, line monitoring, fixtures and MES integrations that raise throughput."
+  "text": "Automotive & Engines Engine and powertrain controls, calibration and validation for OEMs and suppliers in North America and Europe."
  },
  {
-  "title": "Energy & Utilities \u00b7 Industries",
-  "url": "industries.html#energy",
-  "summary": "Monitoring, SCADA dashboards, solar and battery system design support.",
-  "keywords": "",
-  "text": "Energy & Utilities Monitoring, SCADA dashboards, solar and battery system design support."
- },
- {
-  "title": "Transportation \u00b7 Industries",
+  "title": "Commercial Vehicles \u00b7 Industries",
   "url": "industries.html#transportation",
-  "summary": "Fleet telematics, routing tools and maintenance tracking apps.",
+  "summary": "Controls integration, vehicle simulators and field data logging for on-highway and off-highway equipment.",
   "keywords": "",
-  "text": "Transportation Fleet telematics, routing tools and maintenance tracking apps."
+  "text": "Commercial Vehicles Controls integration, vehicle simulators and field data logging for on-highway and off-highway equipment."
+ },
+ {
+  "title": "Industrial Automation \u00b7 Industries",
+  "url": "industries.html#industrial",
+  "summary": "Real-time control platforms, industrial communications, custom I/O and machine safety.",
+  "keywords": "",
+  "text": "Industrial Automation Real-time control platforms, industrial communications, custom I/O and machine safety."
+ },
+ {
+  "title": "Test & Measurement Labs \u00b7 Industries",
+  "url": "industries.html#test-labs",
+  "summary": "Test-cell and chassis-dyno controls, HIL simulation, data acquisition and automated test environments.",
+  "keywords": "",
+  "text": "Test & Measurement Labs Test-cell and chassis-dyno controls, HIL simulation, data acquisition and automated test environments."
  },
  {
   "title": "Small Business \u00b7 Industries",
   "url": "industries.html#small-business",
-  "summary": "Websites, online booking, payments and the automation that saves hours every week.",
+  "summary": "Websites, online payments, customer support tools and the automation that saves hours every week.",
   "keywords": "",
-  "text": "Small Business Websites, online booking, payments and the automation that saves hours every week."
- },
- {
-  "title": "Construction & AEC \u00b7 Industries",
-  "url": "industries.html#construction",
-  "summary": "Estimating tools, field apps, document control and BIM-adjacent workflows.",
-  "keywords": "",
-  "text": "Construction & AEC Estimating tools, field apps, document control and BIM-adjacent workflows."
- },
- {
-  "title": "Retail & E-commerce \u00b7 Industries",
-  "url": "industries.html#retail",
-  "summary": "WooCommerce stores, inventory sync, POS integrations and fulfillment automation.",
-  "keywords": "",
-  "text": "Retail & E-commerce WooCommerce stores, inventory sync, POS integrations and fulfillment automation."
- },
- {
-  "title": "Aerospace & Defense \u00b7 Industries",
-  "url": "industries.html#aerospace",
-  "summary": "Test fixtures, data acquisition and documentation to demanding standards.",
-  "keywords": "",
-  "text": "Aerospace & Defense Test fixtures, data acquisition and documentation to demanding standards."
- },
- {
-  "title": "Medical Devices \u00b7 Industries",
-  "url": "industries.html#medical",
-  "summary": "Embedded firmware, test equipment and design-history documentation support.",
-  "keywords": "",
-  "text": "Medical Devices Embedded firmware, test equipment and design-history documentation support."
+  "text": "Small Business Websites, online payments, customer support tools and the automation that saves hours every week."
  },
  {
   "title": "Startups & R&D \u00b7 Industries",
   "url": "industries.html#startups",
-  "summary": "MVPs, proofs of concept and investor-ready prototypes on a startup budget.",
+  "summary": "Proofs of concept, test instrumentation and engineering leadership without a full-time hire.",
   "keywords": "",
-  "text": "Startups & R&D MVPs, proofs of concept and investor-ready prototypes on a startup budget."
+  "text": "Startups & R&D Proofs of concept, test instrumentation and engineering leadership without a full-time hire."
  },
  {
   "title": "Insights",
@@ -268,51 +254,51 @@
  {
   "title": "Projects",
   "url": "projects.html",
-  "summary": "Engineering, software and web development case studies from Allen Technical Solutions.",
-  "keywords": "projects portfolio case studies work examples results",
-  "text": "All Engineering Consulting Software Web Engineering Production line monitoring Retrofitted sensors and a live dashboard on a packaging line, cutting unplanned downtime. Software Field service mobile app Offline-first iOS/Android app with photo reports, checklists and e-signature. Web WooCommerce parts store 2,000-SKU catalog with Stripe checkout, tiered pricing and automated invoicing. Engineering IoT environmental sensor Custom PCB and firmware reporting temperature and humidity to a cloud dashboard. Consulting Automation feasibility study ROI and risk assessment that guided a manufacturer's robotics investment. Software Customer portal & billing Client login, project status and recurring billing integrated with QuickBooks."
+  "summary": "Selected engineering, consulting and software experience from Stephen D. Allen and Allen Technical Solutions.",
+  "keywords": "projects portfolio case studies experience work examples test cell hil simulators data loggers",
+  "text": "All Engineering Consulting Software Engineering Real-time test-cell controls Technical lead and project manager for hardware-agnostic, Linux-based real-time control systems for automotive chassis and engine test cells, including API, operator interface and release management. Engineering HIL simulators & vehicle simulators Developed and supported hardware-in-the-loop simulators, custom vehicle simulators and engineering test tools used across controls teams. Engineering Field test data loggers Designed and supported field test data loggers and custom test fixtures that improved product reliability. Consulting OEM controls integration, Central Europe Five years in Germany managing OEM relationships, writing technical specifications and hosting the regional controls platform. Software Automated test-cell simulation Led a Six Sigma project simulating advanced test cells, expanding automated testing capability for controls releases. Consulting Audio, video & test instrumentation Independent consulting on audio and video projects and custom test instrumentation for clients."
  },
  {
-  "title": "Production line monitoring \u00b7 Projects",
+  "title": "Real-time test-cell controls \u00b7 Projects",
   "url": "projects.html#p1",
-  "summary": "e monitoring Retrofitted sensors and a live dashboard on a packaging line, cutting unplanned downtime.",
+  "summary": "ell controls Technical lead and project manager for hardware-agnostic, Linux-based real-time control systems for automotive chassis and engine test cells, inclu",
   "keywords": "",
-  "text": "Engineering Production line monitoring Retrofitted sensors and a live dashboard on a packaging line, cutting unplanned downtime."
+  "text": "Engineering Real-time test-cell controls Technical lead and project manager for hardware-agnostic, Linux-based real-time control systems for automotive chassis and engine test cells, including API, operator interface and release management."
  },
  {
-  "title": "Field service mobile app \u00b7 Projects",
+  "title": "HIL simulators & vehicle simulators \u00b7 Projects",
   "url": "projects.html#p2",
-  "summary": "obile app Offline-first iOS/Android app with photo reports, checklists and e-signature.",
+  "summary": "e simulators Developed and supported hardware-in-the-loop simulators, custom vehicle simulators and engineering test tools used across controls teams.",
   "keywords": "",
-  "text": "Software Field service mobile app Offline-first iOS/Android app with photo reports, checklists and e-signature."
+  "text": "Engineering HIL simulators & vehicle simulators Developed and supported hardware-in-the-loop simulators, custom vehicle simulators and engineering test tools used across controls teams."
  },
  {
-  "title": "WooCommerce parts store \u00b7 Projects",
+  "title": "Field test data loggers \u00b7 Projects",
   "url": "projects.html#p3",
-  "summary": "tore 2,000-SKU catalog with Stripe checkout, tiered pricing and automated invoicing.",
+  "summary": "data loggers Designed and supported field test data loggers and custom test fixtures that improved product reliability.",
   "keywords": "",
-  "text": "Web WooCommerce parts store 2,000-SKU catalog with Stripe checkout, tiered pricing and automated invoicing."
+  "text": "Engineering Field test data loggers Designed and supported field test data loggers and custom test fixtures that improved product reliability."
  },
  {
-  "title": "IoT environmental sensor \u00b7 Projects",
+  "title": "OEM controls integration, Central Europe \u00b7 Projects",
   "url": "projects.html#p4",
-  "summary": "ental sensor Custom PCB and firmware reporting temperature and humidity to a cloud dashboard.",
+  "summary": "tral Europe Five years in Germany managing OEM relationships, writing technical specifications and hosting the regional controls platform.",
   "keywords": "",
-  "text": "Engineering IoT environmental sensor Custom PCB and firmware reporting temperature and humidity to a cloud dashboard."
+  "text": "Consulting OEM controls integration, Central Europe Five years in Germany managing OEM relationships, writing technical specifications and hosting the regional controls platform."
  },
  {
-  "title": "Automation feasibility study \u00b7 Projects",
+  "title": "Automated test-cell simulation \u00b7 Projects",
   "url": "projects.html#p5",
-  "summary": "ility study ROI and risk assessment that guided a manufacturer's robotics investment.",
+  "summary": "imulation Led a Six Sigma project simulating advanced test cells, expanding automated testing capability for controls releases.",
   "keywords": "",
-  "text": "Consulting Automation feasibility study ROI and risk assessment that guided a manufacturer's robotics investment."
+  "text": "Software Automated test-cell simulation Led a Six Sigma project simulating advanced test cells, expanding automated testing capability for controls releases."
  },
  {
-  "title": "Customer portal & billing \u00b7 Projects",
+  "title": "Audio, video & test instrumentation \u00b7 Projects",
   "url": "projects.html#p6",
-  "summary": "& billing Client login, project status and recurring billing integrated with QuickBooks.",
+  "summary": "rumentation Independent consulting on audio and video projects and custom test instrumentation for clients.",
   "keywords": "",
-  "text": "Software Customer portal & billing Client login, project status and recurring billing integrated with QuickBooks."
+  "text": "Consulting Audio, video & test instrumentation Independent consulting on audio and video projects and custom test instrumentation for clients."
  },
  {
   "title": "Services",
@@ -326,14 +312,14 @@
   "url": "shop.html",
   "summary": "Buy fixed-price engineering and web service packages, support plans and digital products from Allen Technical Solutions.",
   "keywords": "shop store buy products packages pricing plans woocommerce checkout cart",
-  "text": "Categories All products Service packages Support plans Digital products Your cart Checkout Clear cart Showing sample products Prices are placeholders Popular Starter Business Website 5-page WordPress site, contact form, SEO basics. $1,500 one-time Add to cart E-commerce Launch WooCommerce store, 25 products, Stripe & PayPal. $3,500 one-time Add to cart Engineering Feasibility Review Written assessment of a concept, risks and cost range. $950 fixed Add to cart Website Care Plan Updates, backups, monitoring and 1 hr of edits. $49 / month Subscribe Technical Support Retainer 10 hours of engineering or dev support each month. $950 / month Subscribe Control Panel Design Templates Editable drawing templates and BOM spreadsheet. $79 download Add to cart"
+  "text": "Categories All products Service packages Support plans Digital products Your cart Checkout Clear cart Showing sample products Prices are placeholders Popular Starter Business Website 5-page WordPress site, contact form, SEO basics. $1,500 one-time Add to cart E-commerce Launch WooCommerce store, 25 products, Stripe & PayPal. $3,500 one-time Add to cart Engineering Feasibility Review Written assessment of a concept, risks and cost range. $950 fixed Add to cart Website Care Plan Updates, backups, monitoring and 1 hr of edits. $49 / month Subscribe Technical Support Retainer 10 hours of engineering or dev support each month. $950 / month Subscribe Test Plan & Validation Templates Editable test plan, DVP&R and acceptance templates. $79 download Add to cart"
  },
  {
   "title": "Starter Business Website \u00b7 Shop",
   "url": "shop.html#product-grid",
   "summary": "Website 5-page WordPress site, contact form, SEO basics. $1,500 one-time Add to cart E-commerce Launch WooCommerce store, 25 products, Stripe & PayPal. $3,500",
   "keywords": "",
-  "text": "Popular Starter Business Website 5-page WordPress site, contact form, SEO basics. $1,500 one-time Add to cart E-commerce Launch WooCommerce store, 25 products, Stripe & PayPal. $3,500 one-time Add to cart Engineering Feasibility Review Written assessment of a concept, risks and cost range. $950 fixed Add to cart Website Care Plan Updates, backups, monitoring and 1 hr of edits. $49 / month Subscribe Technical Support Retainer 10 hours of engineering or dev support each month. $950 / month Subscribe Control Panel Design Templates Editable drawing templates and BOM spreadsheet. $79 download Add to cart"
+  "text": "Popular Starter Business Website 5-page WordPress site, contact form, SEO basics. $1,500 one-time Add to cart E-commerce Launch WooCommerce store, 25 products, Stripe & PayPal. $3,500 one-time Add to cart Engineering Feasibility Review Written assessment of a concept, risks and cost range. $950 fixed Add to cart Website Care Plan Updates, backups, monitoring and 1 hr of edits. $49 / month Subscribe Technical Support Retainer 10 hours of engineering or dev support each month. $950 / month Subscribe Test Plan & Validation Templates Editable test plan, DVP&R and acceptance templates. $79 download Add to cart"
  },
  {
   "title": "Software & App Development",
