@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 220 220" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Seamless tile: traces either stay inside and end in pads, or cross at matching edge positions -->
+  <g id="t" stroke-width="1.4">
+    <path d="M28.5 34H90l22 22h48.5"/>
+    <circle cx="25" cy="34" r="3.5"/><circle cx="164" cy="56" r="3.5"/>
+    <path d="M44 162.5V132l22-22h38.5"/>
+    <circle cx="44" cy="166" r="3.5"/><circle cx="108" cy="110" r="3.5"/>
+    <path d="M168 104.5V150l-20 20h-28.5"/>
+    <circle cx="168" cy="101" r="3.5"/><circle cx="116" cy="170" r="3.5"/>
+    <path d="M0 204h66l10-10h56l10 10h78"/>
+    <path d="M204 0v66l-9 9v54l9 9v82"/>
+    <circle cx="86" cy="78" r="2"/><circle cx="140" cy="128" r="2"/>
+  </g>
+  <use href="#t" stroke="#FFFFFF" stroke-opacity=".7" transform="translate(0 1.2)"/>
+  <use href="#t" stroke="#1E74F0" stroke-opacity=".16"/>
+</svg>
