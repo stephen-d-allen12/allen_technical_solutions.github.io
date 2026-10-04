@@ -27,6 +27,7 @@ That regenerates every `*.html` file at the repo root and `search-index.json` (u
 | Quote / contact forms | Fluent Forms, WPForms or Gravity Forms |
 | Book a Call | Amelia, Bookly or a Calendly embed |
 | Monthly plans | WooCommerce Subscriptions |
+| Software downloads (try or buy) | WooCommerce downloadable products + a license-key plugin such as License Manager for WooCommerce (or Easy Digital Downloads with Software Licensing); trials as free downloadable products |
 
 ## Brand colour
 

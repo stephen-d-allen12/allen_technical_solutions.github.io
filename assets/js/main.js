@@ -6,7 +6,7 @@
 
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
-  const desktop = () => window.matchMedia("(min-width: 1025px)").matches;
+  const desktop = () => window.matchMedia("(min-width: 1181px)").matches;
   const store = {
     get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch (e) { return d; } },
     set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} },
@@ -179,6 +179,18 @@
     else { const b = $("button[type=submit]", form); if (b) b.textContent = "Thanks ✓"; }
     form.reset();
   }));
+
+  /* ---------- Software trial dialog (WooCommerce downloadable product + license plugin later) ---------- */
+  const trial = $("#trial-dialog");
+  if (trial && trial.showModal) {
+    $$("[data-trial]").forEach((b) => b.addEventListener("click", () => {
+      $("[data-trial-name]", trial).textContent = b.dataset.trial;
+      $(".form-success", trial).classList.remove("show");
+      trial.showModal();
+    }));
+    $$("[data-dialog-close]", trial).forEach((b) => b.addEventListener("click", () => trial.close()));
+    trial.addEventListener("click", (e) => { if (e.target === trial) trial.close(); });
+  }
 
   /* ---------- Misc ---------- */
   $$("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));

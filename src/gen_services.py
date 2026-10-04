@@ -3,7 +3,7 @@ from pathlib import Path
 
 LINES = {
  "engineering": dict(title="Engineering Services", icon="cpu", nav="services",
-  lead="Electrical, mechanical and embedded engineering, real-time test systems and product validation. Grounded in 26+ years of controls and test engineering and accelerated with modern AI-assisted tools.",
+  lead="Electrical, mechanical and embedded engineering, real-time test systems and product validation. Grounded in deep controls and test engineering experience and accelerated with modern AI-assisted tools.",
   kw="engineering electrical electronics mechanical embedded controls real-time test automation hil simulation calibration data acquisition instrumentation linux validation prototype pcb cad design analysis",
   items=[("design","ruler","Design &amp; Analysis","Requirements, concept design, calculations, CAD and simulation so decisions are made on numbers, not guesses.",["Requirements &amp; specifications","3D CAD and drawings","Load, thermal and tolerance analysis"]),
          ("electrical","bolt","Electrical &amp; Electronics","Circuit and PCB design, wiring and power distribution, and electronic hardware for products and test equipment.",["Schematics and PCB layout","Wiring harnesses and diagrams","Power and protection design"]),
@@ -14,7 +14,7 @@ LINES = {
          ("daq","chart","Data Acquisition &amp; Instrumentation","Custom test instrumentation, data loggers and DAQ systems for the lab, the test cell or the field.",["Field test data loggers","Sensor and signal conditioning","Audio and video test setups"]),
          ("validation","flask","Prototyping, Calibration &amp; Validation","Rapid prototypes, calibration development and validation plans that prove the design before you commit.",["3D printed and machined prototypes","Calibration strategies and values","Validation, acceptance and failure analysis"])]),
  "consulting": dict(title="Technical Consulting", icon="chart", nav="services",
-  lead="Independent technical advice and engineering leadership on demand, from someone who has led global controls teams and complex programs.",
+  lead="Independent technical advice and engineering leadership on demand, backed by experience leading global controls teams and complex programs.",
   kw="consulting advisory strategy feasibility program project management requirements specifications compliance standards functional safety cybersecurity iso iec six sigma training mentoring process improvement",
   items=[("strategy","chart","Technical Strategy","Technology roadmaps, build-vs-buy decisions and vendor selection grounded in your business goals.",["Architecture and technology roadmaps","Build vs. buy analysis","Vendor and tool selection"]),
          ("feasibility","doc","Feasibility Studies","Cost, risk and technical feasibility reviews before you invest in a new product or system.",["Cost and ROI estimates","Risk registers","Go / no-go recommendations"]),
@@ -25,7 +25,7 @@ LINES = {
          ("training","users","Training &amp; Mentoring","Hands-on training and coaching for your engineers on tools, systems and best practices.",["On-site or remote sessions","Custom curriculum","Engineer coaching and mentoring"]),
          ("process","gear","Process Improvement","Six Sigma-style improvement of engineering, test and release processes.",["Process mapping and metrics","Release-process improvement","Automation opportunities"])]),
  "software": dict(title="Software &amp; App Development", icon="code", nav="services",
-  lead="Custom software, mobile apps and automation that remove manual work and give you better data. Built with AI-assisted development and reviewed by an engineer before release.",
+  lead="Custom software, mobile apps and automation that remove manual work and give you better data. Built with AI-assisted development and fully tested before release.",
   kw="software development apps mobile ios android web app automation data cloud devops ai machine learning api integration",
   items=[("custom","code","Custom Software","Web applications, internal tools and APIs built around how your business actually works.",["Web apps and portals","APIs and integrations","Modernizing legacy tools"]),
          ("mobile","mobile","Mobile Apps","Cross-platform iOS and Android apps with offline support, notifications and payments.",["iOS and Android","Offline-first sync","App Store publishing"]),
