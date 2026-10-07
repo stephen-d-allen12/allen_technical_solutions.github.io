@@ -192,71 +192,17 @@
     trial.addEventListener("click", (e) => { if (e.target === trial) trial.close(); });
   }
 
-  /* ---------- Home hero: slideshow ---------- */
-  const hero = $("[data-hero]");
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let surge = () => {};
-  if (hero) {
-    const SLIDE_MS = 8000;
-    hero.style.setProperty("--slide-ms", SLIDE_MS + "ms");
-    const slides = $$(".hero-slide", hero), dots = $$(".hero-dots button", hero), copy = $(".hero-copy", hero);
-    let current = 0, timer = 0, startedAt = 0, remaining = SLIDE_MS, paused = false;
-    const arm = (ms) => {
-      clearTimeout(timer);
-      if (reduceMotion || paused) return;
-      startedAt = performance.now();
-      remaining = ms;
-      timer = setTimeout(() => show(current + 1), ms);
-    };
-    function show(i, quiet) {
-      current = (i + slides.length) % slides.length;
-      slides.forEach((s, k) => {
-        const on = k === current;
-        s.classList.toggle("is-active", on);
-        s.setAttribute("aria-hidden", String(!on));
-        s.inert = !on;
-      });
-      dots.forEach((d, k) => {
-        d.classList.remove("is-active");
-        d.removeAttribute("aria-current");
-        if (k === current) { void d.offsetWidth; d.classList.add("is-active"); d.setAttribute("aria-current", "true"); }
-      });
-      if (!quiet) surge(current);
-      arm(SLIDE_MS);
-    }
-    const pause = (on) => {
-      if (on === paused) return;
-      paused = on;
-      hero.classList.toggle("hero-paused", on);
-      if (on) { clearTimeout(timer); remaining -= performance.now() - startedAt; }
-      else arm(Math.max(400, remaining));
-    };
-    dots.forEach((d, k) => d.addEventListener("click", () => show(k)));
-    $("[data-slide-prev]", hero).addEventListener("click", () => show(current - 1));
-    $("[data-slide-next]", hero).addEventListener("click", () => show(current + 1));
-    copy.addEventListener("mouseenter", () => pause(true));
-    copy.addEventListener("mouseleave", () => pause(false));
-    copy.addEventListener("focusin", () => pause(true));
-    copy.addEventListener("focusout", (e) => { if (!copy.contains(e.relatedTarget)) pause(false); });
-    let touchX = null;
-    hero.addEventListener("touchstart", (e) => { touchX = e.touches[0].clientX; }, { passive: true });
-    hero.addEventListener("touchend", (e) => {
-      if (touchX === null) return;
-      const dx = e.changedTouches[0].clientX - touchX;
-      if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
-      touchX = null;
-    });
-    show(0, true);
-  }
-
   /* ---------- Home hero: electron tracers ----------
      Electrons start slow and dim, then accelerate and brighten along the baked circuit
-     traces (paths come from src/hero_traces.py) and flash the pad they land in. */
-  const traceSvg = hero && $(".hero-traces", hero);
-  if (traceSvg && !reduceMotion) {
-    const NS = "http://www.w3.org/2000/svg";
-    const sparks = $(".hero-sparks", traceSvg);
-    const routes = $$("[data-route]", traceSvg).map((p) => ({
+     traces (paths come from src/hero_traces.py) and flash the pad they land in.
+     Each slideshow panel has its own trace overlay; makeTracer() drives one of them. */
+  const hero = $("[data-hero]");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const NS = "http://www.w3.org/2000/svg";
+  const narrow = window.matchMedia("(max-width: 1024px)");
+  const makeTracer = (svg) => {
+    const sparks = $(".hero-sparks", svg), halo = `url(#${svg.dataset.halo})`;
+    const routes = $$("[data-route]", svg).map((p) => ({
       el: p, id: p.dataset.route, end: p.dataset.end, w: +p.dataset.weight, big: !!p.dataset.big,
       d: p.getAttribute("d"), len: p.getTotalLength(),
       branches: (p.dataset.branches || "").split(";").filter(Boolean).map((b) => {
@@ -275,18 +221,17 @@
     }));
 
     // Map the visible part of the image: "right center / cover" on desktop, the art crop on narrow screens
-    const narrow = window.matchMedia("(max-width: 1024px)");
     let scale = 1;
     const fit = () => {
-      const box = traceSvg.getBoundingClientRect();
+      const box = svg.getBoundingClientRect();
       let x0, x1 = 2601, y0 = 0, y1 = 942;
       if (narrow.matches) {
-        traceSvg.setAttribute("viewBox", "1000 0 1601 942");
-        traceSvg.setAttribute("preserveAspectRatio", "xMidYMin meet");
+        svg.setAttribute("viewBox", "1000 0 1601 942");
+        svg.setAttribute("preserveAspectRatio", "xMidYMin meet");
         scale = box.width / 1601; x0 = 1000;
       } else {
-        traceSvg.setAttribute("viewBox", "0 0 2601 942");
-        traceSvg.setAttribute("preserveAspectRatio", "xMaxYMid slice");
+        svg.setAttribute("viewBox", "0 0 2601 942");
+        svg.setAttribute("preserveAspectRatio", "xMaxYMid slice");
         scale = Math.max(box.width / 2601, box.height / 942);
         x0 = 2601 - box.width / scale;
         y0 = (942 - box.height / scale) / 2; y1 = 942 - y0;
@@ -300,7 +245,7 @@
       });
     };
 
-    const live = new Set(), flashes = new Set();
+    const live = new Set(), flashes = new Set(), glows = new Set();
     const make = (parent, tag, attrs) => {
       const e = document.createElementNS(NS, tag);
       for (const k in attrs) e.setAttribute(k, attrs[k]);
@@ -311,22 +256,20 @@
       if (!r || r.s0 === null || r.s0 === undefined || live.size > 7) return;
       const g = make(sparks, "g", {});
       const s0 = opts.from ?? r.s0, dist = r.len - s0;
-      const e = {
+      live.add({
         r, g, s0, dist, t0: performance.now(), pow: opts.pow || 2.6, fired: new Set(),
         dur: opts.dur || Math.min(7200, Math.max(2400, (dist * scale) / 0.17)),
         glow: make(g, "path", { class: "spark-glow", d: r.d, "stroke-width": 8 / scale }),
         core: make(g, "path", { class: "spark-core", d: r.d, "stroke-width": 2.2 / scale }),
-        halo: make(g, "circle", { fill: "url(#spark-halo)", r: 14 / scale }),
+        halo: make(g, "circle", { fill: halo, r: 14 / scale }),
         head: make(g, "circle", { class: "spark-head", r: 2.6 / scale }),
-      };
-      live.add(e);
+      });
     };
     const flash = (x, y, big) => {
-      const c = make(sparks, "circle", { class: "pad-flash", cx: x, cy: y, fill: "url(#spark-halo)" });
+      const c = make(sparks, "circle", { class: "pad-flash", cx: x, cy: y, fill: halo });
       flashes.add({ c, big, t0: performance.now() });
     };
     // after a main feed lands, the A's leg it just climbed keeps glowing and fades out
-    const glows = new Set();
     const afterglow = (r) => {
       const L = Math.min(340, r.len);
       const a = make(sparks, "path", { class: "afterglow", d: r.d, "stroke-dasharray": `${L} ${r.len}`, "stroke-dashoffset": String(L - r.len) });
@@ -338,7 +281,6 @@
       for (const r of pool) if ((x -= r.w) <= 0) return r;
       return pool[0];
     };
-    surge = (i) => spawn(byId[i % 2 ? "feed-right" : "feed-left"]);
 
     const step = (now) => {
       for (const e of live) {
@@ -365,7 +307,7 @@
         }
       }
       for (const f of flashes) {
-        const q = (now - f.t0) / (f.big ? 1200 : 750);
+        const q = Math.max(0, (now - f.t0) / (f.big ? 1200 : 750));   // rAF time can trail a flash spawned this frame
         if (q >= 1) { flashes.delete(f); f.c.remove(); continue; }
         const r0 = f.big ? 24 : 8, grow = f.big ? 50 : 20;
         f.c.setAttribute("r", r0 + grow * Math.sqrt(q));
@@ -374,36 +316,153 @@
         f.c.style.fillOpacity = (0.5 * (1 - q)).toFixed(3);
       }
       for (const a of glows) {
-        const q = (now - a.t0) / 1600;
+        const q = Math.max(0, (now - a.t0) / 1600);
         if (q >= 1) { glows.delete(a); a.a.remove(); continue; }
         a.a.setAttribute("stroke-width", (3 + 5 * (1 - q)) / scale);
         a.a.style.opacity = (0.75 * (1 - q) * (1 - q)).toFixed(3);
       }
     };
 
-    let running = false, raf = 0, nextAt = 0, stoppedAt = 0, onScreen = true;
+    let running = false, raf = 0, nextAt = 0, stoppedAt = 0;
     const loop = (now) => {
       if (now >= nextAt) { if (live.size < 4) spawn(pick()); nextAt = now + 700 + Math.random() * 1500; }
       step(now);
       raf = requestAnimationFrame(loop);
     };
-    const start = () => {
-      if (running || !onScreen || document.hidden) return;
-      running = true;
-      const gap = stoppedAt ? performance.now() - stoppedAt : 0;
-      live.forEach((e) => (e.t0 += gap));
-      flashes.forEach((f) => (f.t0 += gap));
-      glows.forEach((a) => (a.t0 += gap));
-      raf = requestAnimationFrame(loop);
-    };
-    const stop = () => { if (running) { running = false; stoppedAt = performance.now(); cancelAnimationFrame(raf); } };
     fit();
-    let resizeTimer = 0;
-    window.addEventListener("resize", () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(fit, 150); });
-    new IntersectionObserver((entries) => { onScreen = entries[0].isIntersecting; onScreen ? start() : stop(); }).observe(hero);
-    document.addEventListener("visibilitychange", () => (document.hidden ? stop() : start()));
-    start();
-    spawn(byId["feed-left"]);
+    return {
+      fit,
+      start() {
+        if (running) return;
+        running = true;
+        const gap = stoppedAt ? performance.now() - stoppedAt : 0;
+        live.forEach((e) => (e.t0 += gap));
+        flashes.forEach((f) => (f.t0 += gap));
+        glows.forEach((a) => (a.t0 += gap));
+        raf = requestAnimationFrame(loop);
+      },
+      stop() { if (running) { running = false; stoppedAt = performance.now(); cancelAnimationFrame(raf); } },
+      // a panel that has slid away starts clean the next time it comes back
+      clear() {
+        [live, flashes, glows].forEach((set) => set.clear());
+        sparks.replaceChildren();
+        stoppedAt = 0; nextAt = 0;
+      },
+      // the main feed that greets a panel as it slides in: left leg on odd slides, right on even
+      surge(i) { spawn(byId[i % 2 ? "feed-right" : "feed-left"]); },
+    };
+  };
+
+  /* ---------- Home hero: slideshow ----------
+     Full-width panels: the current one slides out to the left while the next slides in
+     from the right (the reverse when going back). Arrows and dots stay put. */
+  if (hero) {
+    const SLIDE_MS = 8000, MOVE_MS = 900;
+    hero.style.setProperty("--slide-ms", SLIDE_MS + "ms");
+    const panels = $$(".hero-panel", hero), dots = $$(".hero-dots button", hero), n = panels.length;
+    const engines = reduceMotion ? [] : panels.map((p) => { const svg = $(".hero-traces", p); return svg ? makeTracer(svg) : null; });
+    const wanted = new Set([0]);
+    let onScreen = true;
+    const syncEngines = () => engines.forEach((e, k) => {
+      if (!e) return;
+      if (wanted.has(k) && onScreen && !document.hidden) e.start(); else e.stop();
+    });
+
+    let current = 0, moving = false, timer = 0, startedAt = 0, remaining = SLIDE_MS, paused = false;
+    const arm = (ms) => {
+      clearTimeout(timer);
+      if (reduceMotion || paused) return;
+      startedAt = performance.now();
+      remaining = ms;
+      timer = setTimeout(() => go(current + 1, 1), ms);
+    };
+    const setDots = () => dots.forEach((d, k) => {
+      d.classList.remove("is-active");
+      d.removeAttribute("aria-current");
+      if (k === current) { void d.offsetWidth; d.classList.add("is-active"); d.setAttribute("aria-current", "true"); }
+    });
+    panels.forEach((p, k) => { if (k !== current) { p.setAttribute("aria-hidden", "true"); p.inert = true; } });
+
+    function go(i, dir) {
+      const to = (i + n) % n;
+      if (moving || to === current) return;
+      const from = current, out = panels[from], next = panels[to];
+      dir = dir || (to > from ? 1 : -1);
+      moving = true;
+      current = to;
+      // park the incoming panel just off-screen on the side it enters from, then slide both
+      next.classList.remove("is-moving");
+      next.style.transform = `translateX(${dir * 100}%)`;
+      next.classList.add("is-visible");
+      void next.offsetWidth;
+      out.classList.add("is-moving");
+      next.classList.add("is-moving");
+      out.style.transform = `translateX(${-dir * 100}%)`;
+      next.style.transform = "translateX(0)";
+      next.removeAttribute("aria-hidden"); next.inert = false;
+      out.setAttribute("aria-hidden", "true"); out.inert = true;
+      if (engines[to]) { wanted.add(to); syncEngines(); engines[to].surge(to); }
+      setDots();
+      arm(SLIDE_MS);
+      setTimeout(() => {
+        out.classList.remove("is-active", "is-visible", "is-moving");
+        out.style.transform = "";
+        next.classList.add("is-active");
+        next.classList.remove("is-visible", "is-moving");
+        next.style.transform = "";
+        wanted.delete(from);
+        if (engines[from]) { engines[from].stop(); engines[from].clear(); }
+        syncEngines();
+        moving = false;
+      }, reduceMotion ? 0 : MOVE_MS + 40);
+    }
+    const pause = (on) => {
+      if (on === paused) return;
+      paused = on;
+      hero.classList.toggle("hero-paused", on);
+      if (on) { clearTimeout(timer); remaining -= performance.now() - startedAt; }
+      else arm(Math.max(400, remaining));
+    };
+    dots.forEach((d, k) => d.addEventListener("click", () => go(k)));
+    $("[data-slide-prev]", hero).addEventListener("click", () => go(current - 1, -1));
+    $("[data-slide-next]", hero).addEventListener("click", () => go(current + 1, 1));
+    $$(".hero-copy, .hero-controls", hero).forEach((el) => {
+      el.addEventListener("mouseenter", () => pause(true));
+      el.addEventListener("mouseleave", () => pause(false));
+    });
+    hero.addEventListener("focusin", () => pause(true));
+    hero.addEventListener("focusout", (e) => { if (!hero.contains(e.relatedTarget)) pause(false); });
+    let touchX = null;
+    hero.addEventListener("touchstart", (e) => { touchX = e.touches[0].clientX; }, { passive: true });
+    hero.addEventListener("touchend", (e) => {
+      if (touchX === null) return;
+      const dx = e.changedTouches[0].clientX - touchX;
+      if (Math.abs(dx) > 50) go(current + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1);
+      touchX = null;
+    });
+
+    // the copy keeps clear of the pinned arrows and stats, whatever height they wrap to
+    const ui = $(".hero-ui", hero);
+    const setUi = () => hero.style.setProperty("--ui-h", ui.offsetHeight + "px");
+    setUi();
+    if ("ResizeObserver" in window) new ResizeObserver(setUi).observe(ui);
+    else window.addEventListener("resize", setUi);
+
+    if (engines.length) {
+      let resizeTimer = 0;
+      const refit = () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => engines.forEach((e) => e && e.fit()), 150);
+      };
+      if ("ResizeObserver" in window) new ResizeObserver(refit).observe(panels[0]);
+      else window.addEventListener("resize", refit);
+      new IntersectionObserver((entries) => { onScreen = entries[0].isIntersecting; syncEngines(); }).observe(hero);
+      document.addEventListener("visibilitychange", syncEngines);
+      syncEngines();
+      if (engines[0]) engines[0].surge(0);
+    }
+    setDots();
+    arm(SLIDE_MS);
   }
 
   /* ---------- Misc ---------- */

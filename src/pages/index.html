@@ -2,12 +2,12 @@ title: Allen Technical Solutions | Engineering, Consulting & Software
 description: Engineering services, technical consulting, custom software, mobile apps and web development for businesses that build things.
 keywords: home engineering firm consulting software apps websites
 ---
-<section class="hero hero-full" data-hero>
-  {{hero_traces}}
-  <div class="wrap">
-    <div class="hero-copy">
-      <div class="hero-slides" data-slides aria-roledescription="carousel" aria-label="Highlights">
-        <div class="hero-slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 4">
+<section class="hero hero-full" data-hero aria-roledescription="carousel" aria-label="Highlights">
+  <div class="hero-track">
+    <div class="hero-panel is-active" role="group" aria-roledescription="slide" aria-label="1 of 4">
+      {{hero_traces}}
+      <div class="wrap">
+        <div class="hero-copy">
           <span class="hero-eyebrow">Engineering · Consulting · Software</span>
           <h1>Engineered solutions, <span>built to perform.</span></h1>
           <p class="hero-lead">Embedded controls, real-time test systems and validation, plus the software, apps and websites your business runs on. We bring almost 30 years of engineering across automotive, industrial and transportation programs.</p>
@@ -16,7 +16,12 @@ keywords: home engineering firm consulting software apps websites
             <a class="btn btn-ghost" href="services.html">Explore Services</a>
           </div>
         </div>
-        <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+      </div>
+    </div>
+    <div class="hero-panel" role="group" aria-roledescription="slide" aria-label="2 of 4">
+      {{hero_traces}}
+      <div class="wrap">
+        <div class="hero-copy">
           <span class="hero-eyebrow">Engineering Services</span>
           <h2 class="hero-title">Controls and test systems <span>that hold up in the field.</span></h2>
           <p class="hero-lead">Electronics, embedded controls, real-time Linux platforms, HIL simulation and data acquisition, designed, tested and documented to your standards.</p>
@@ -25,7 +30,12 @@ keywords: home engineering firm consulting software apps websites
             <a class="btn btn-ghost" href="consulting.html">Technical Consulting</a>
           </div>
         </div>
-        <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+      </div>
+    </div>
+    <div class="hero-panel" role="group" aria-roledescription="slide" aria-label="3 of 4">
+      {{hero_traces}}
+      <div class="wrap">
+        <div class="hero-copy">
           <span class="hero-eyebrow">Software</span>
           <h2 class="hero-title">Tools you can try <span>before you buy.</span></h2>
           <p class="hero-lead">Data logging, test sequencing, CAN monitoring and business apps. Download a free 30-day trial, then license it when it earns its place.</p>
@@ -34,7 +44,12 @@ keywords: home engineering firm consulting software apps websites
             <a class="btn btn-ghost" href="software.html">Custom Software</a>
           </div>
         </div>
-        <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
+      </div>
+    </div>
+    <div class="hero-panel" role="group" aria-roledescription="slide" aria-label="4 of 4">
+      {{hero_traces}}
+      <div class="wrap">
+        <div class="hero-copy">
           <span class="hero-eyebrow">Web Development</span>
           <h2 class="hero-title">Websites for churches, <span>organizations and businesses.</span></h2>
           <p class="hero-lead">Welcoming church sites, personal and organization sites, and business websites and online stores, with care plans that keep them fast and secure.</p>
@@ -44,10 +59,14 @@ keywords: home engineering firm consulting software apps websites
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="hero-ui">
+    <div class="wrap">
       <div class="hero-controls">
         <button class="hero-arrow" type="button" aria-label="Previous slide" data-slide-prev>{{icon:chev}}</button>
         <div class="hero-dots" role="group" aria-label="Choose a slide">
-          <button type="button" class="is-active" aria-label="Slide 1" aria-current="true"></button>
+          <button type="button" class="is-active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" aria-label="Slide 2"></button>
           <button type="button" aria-label="Slide 3"></button>
           <button type="button" aria-label="Slide 4"></button>

@@ -80,7 +80,8 @@ def parse(path: Path):
 def render(text: str, nav: str = "") -> str:
     text = text.replace("{{brand_mark}}", BRAND_MARK)
     text = text.replace("{{circuit}}", CIRCUIT)
-    text = text.replace("{{hero_traces}}", svg_overlay())
+    panels = iter(range(1, 100))
+    text = re.sub(r"\{\{hero_traces\}\}", lambda m: svg_overlay(next(panels)), text)
     text = text.replace("{{chev}}", icon("chev").replace("<svg ", '<svg class="chev" ', 1))
     text = re.sub(r"\{\{icon:(\w+)\}\}", lambda m: icon(m.group(1)), text)
     text = re.sub(

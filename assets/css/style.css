@@ -243,15 +243,32 @@ p { margin: 0 0 1em; }
 .hero-stats { display: flex; gap: 36px; margin-top: 40px; flex-wrap: wrap; }
 .hero-stats strong { display: block; font-family: var(--font-head); font-size: 2rem; color: #fff; line-height: 1; }
 .hero-stats span { font-size: .85rem; color: #9FB0CA; }
-/* Full-bleed hero: the logo artwork is the background, copy sits over the dark left side */
-.hero-full { background: url("../img/hero-bg.jpg") right center / cover no-repeat, var(--navy-950); }
+/* Full-bleed hero: a carousel of full-width panels. Each panel carries the logo artwork as its
+   background with the copy over the dark left side; the current panel slides out to the left
+   while the next one slides in from the right. */
+.hero-full { background: var(--navy-950); }
+.hero-track { display: grid; }
+.hero-panel {
+  grid-area: 1 / 1; position: relative; isolation: isolate; overflow: hidden;
+  background: url("../img/hero-bg.jpg") right center / cover no-repeat, var(--navy-950);
+  display: flex; flex-direction: column;
+  visibility: hidden; transform: translateX(100%);
+}
+.hero-panel.is-active { visibility: visible; transform: none; }
+.hero-panel.is-visible { visibility: visible; }
+.hero-panel.is-moving { transition: transform .9s cubic-bezier(.65, 0, .35, 1); will-change: transform; }
 /* Dark wash over the left side sits above the electron layer, so tracers start dim behind the copy */
-.hero-full::after {
+.hero-panel::after {
   content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background: linear-gradient(90deg, rgba(7,13,24,.8) 0%, rgba(7,13,24,.55) 34%, rgba(7,13,24,.1) 58%, rgba(7,13,24,0) 70%);
 }
-.hero-full .wrap { grid-template-columns: 1fr; min-height: clamp(520px, 44vw, 680px); padding-top: 52px; padding-bottom: 52px; z-index: 2; }
+/* the copy is centred in the space above the pinned arrows and stats (--ui-h is their measured height) */
+.hero-full .hero-panel .wrap { flex: 1 0 auto; width: 100%; grid-template-columns: 1fr; align-content: center; min-height: clamp(520px, 44vw, 680px); padding-top: 52px; padding-bottom: calc(var(--ui-h, 164px) + 26px); z-index: 2; }
 .hero-full .hero-copy { max-width: 600px; }
+/* Arrows, dots and stats stay put over the moving panels */
+.hero-ui { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; pointer-events: none; }
+.hero.hero-full .hero-ui .wrap { display: block; min-height: 0; padding-top: 0; padding-bottom: 52px; }
+.hero-ui .hero-controls { pointer-events: auto; width: max-content; }
 
 /* Electron tracers: the SVG uses the background image's own coordinates (viewBox 2601x942,
    xMaxYMid slice = "right center / cover"), so electrons ride exactly on the baked traces */
@@ -266,15 +283,9 @@ p { margin: 0 0 1em; }
 .afterglow { fill: none; stroke: #4FA8FF; stroke-linecap: round; }
 
 /* Slideshow */
-.hero-slides { display: grid; }
-.hero-slide {
-  grid-area: 1 / 1; opacity: 0; visibility: hidden; transform: translateY(14px);
-  transition: opacity .45s ease, transform .45s ease, visibility 0s linear .45s;
-}
-.hero-slide.is-active { opacity: 1; visibility: visible; transform: none; transition: opacity .8s ease .45s, transform .8s ease .45s, visibility 0s; }
 .hero-title { font-size: clamp(2.2rem, 5vw, 3.6rem); }
 .hero .hero-title span { color: var(--blue-400); }
-.hero-controls { display: flex; align-items: center; gap: 12px; margin-top: 26px; }
+.hero-controls { display: flex; align-items: center; gap: 12px; }
 .hero-arrow {
   width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; cursor: pointer;
   border: 1px solid rgba(141,187,255,.35); background: rgba(7,13,24,.35); color: #fff;
@@ -589,12 +600,13 @@ p { margin: 0 0 1em; }
 @media (min-width: 1181px) { .menu-close { display: none; } }
 /* Narrow screens: logo art sits centred at the top, copy below it */
 @media (max-width: 1024px) {
-  .hero-full {
+  .hero-panel {
     background: url("../img/hero-mobile.jpg") center top / 100% auto no-repeat, var(--navy-950);
   }
-  .hero-full::after { display: none; }
+  .hero-panel::after { display: none; }
   .hero-traces { height: 58.84vw; }
-  .hero.hero-full .wrap { min-height: 0; padding-top: calc(58.8vw + 8px); padding-bottom: 64px; }
+  .hero.hero-full .hero-panel .wrap { min-height: 0; padding-top: calc(58.8vw + 8px); }
+  .hero.hero-full .hero-ui .wrap { padding-bottom: 64px; }
 }
 @media (max-width: 720px) {
   .utility-tag { display: none; }

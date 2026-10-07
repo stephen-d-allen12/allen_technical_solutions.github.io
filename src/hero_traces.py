@@ -12,9 +12,9 @@ A_PAD_R = 25
 
 # --- baked traces ---------------------------------------------------------
 TRACES = [
-    # upper-left: branches off the vertical traces above the A, out to the left edge
-    [(1680, 150), (1560, 150), (1500, 210), (0, 210)],
-    [(1690, 120), (1540, 120), (1480, 180), (800, 180), (760, 140), (0, 140)],
+    # upper-left: pads stop short of the logo's vertical traces above the A (x ~1672), out to the left edge
+    [(1632, 150), (1560, 150), (1500, 210), (0, 210)],
+    [(1644, 120), (1540, 120), (1480, 180), (800, 180), (760, 140), (0, 140)],
     [(1450, 0), (1450, 60), (1400, 110), (0, 110)],
     # right side: off the big triangle's right edge, out to the right edge
     [(o + 1021, 420), (o + 1300, 420), (o + 1340, 380), (W, 380)],
@@ -50,7 +50,7 @@ for i in range(5):
     BUNDLE_PADS.append(pad)
 TRACES += BUNDLE
 
-NODES = BUNDLE_PADS + [(1680, 150), (1690, 120), (o + 1021, 420), (o + 990, 360),
+NODES = BUNDLE_PADS + [(1632, 150), (1644, 120), (o + 1021, 420), (o + 990, 360),
                        (o + 1283, 820), (o + 560, 790), (o + 1000, 790), (500, 750)]
 PAD_R = 9
 
@@ -100,8 +100,9 @@ ROUTES = [
 ]
 
 
-def svg_overlay():
-    """Hidden route paths for the hero overlay; main.js animates electrons along them."""
+def svg_overlay(n=1):
+    """Hidden route paths for one hero panel's overlay; main.js animates electrons along them.
+    n keeps the glow gradient id unique when several panels each carry an overlay."""
     def d(pts):
         return "M" + " L".join(f"{x:g} {y:g}" for x, y in pts)
     paths = []
@@ -113,8 +114,8 @@ def svg_overlay():
             attrs += ' data-branches="' + ";".join(f"{b},{x},{y}" for b, (x, y) in r["branches"]) + '"'
         paths.append(f'    <path {attrs} d="{d(r["pts"])}"/>')
     return (f'<svg class="hero-traces" viewBox="0 0 {W} {H}" preserveAspectRatio="xMaxYMid slice" '
-            'aria-hidden="true" focusable="false">\n'
-            '  <defs><radialGradient id="spark-halo"><stop offset="0" stop-color="#CFEBFF" stop-opacity=".95"/>'
+            f'data-halo="spark-halo-{n}" aria-hidden="true" focusable="false">\n'
+            f'  <defs><radialGradient id="spark-halo-{n}"><stop offset="0" stop-color="#CFEBFF" stop-opacity=".95"/>'
             '<stop offset=".35" stop-color="#3FA2FF" stop-opacity=".4"/><stop offset="1" stop-color="#1E74F0" stop-opacity="0"/>'
             '</radialGradient></defs>\n  <g class="hero-routes">\n' + "\n".join(paths) +
             '\n  </g>\n  <g class="hero-sparks"></g>\n</svg>')
