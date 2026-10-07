@@ -79,9 +79,9 @@ A_BAR_2 = [(1645, 463), (1677, 463), (1713, 420), (1842, 420)]
 
 ROUTES = [
     # main feeds: from the edges, through the A
-    dict(id="feed-left", pts=BUNDLE[0][:-1] + A_LEFT_LEG, end="pad", weight=4, big=True,
+    dict(id="feed-left", pts=BUNDLE[0][:-1] + A_LEFT_LEG, end="pad", weight=2, big=True,
          branches=[("bar-1", (1712, 375)), ("bar-2", (1645, 463))]),
-    dict(id="feed-right", pts=_rev(TRACES[7])[:-1] + A_RIGHT_LEG, end="tip", weight=3, big=True),
+    dict(id="feed-right", pts=_rev(TRACES[7])[:-1] + A_RIGHT_LEG, end="tip", weight=1.5, big=True),
     dict(id="bar-1", pts=A_BAR_1, end="pad", weight=0),
     dict(id="bar-2", pts=A_BAR_2, end="pad", weight=0),
     # bundle traces from the left edge to their pads
