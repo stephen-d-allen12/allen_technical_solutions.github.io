@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" data-theme="sun">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Allen Fish Finder: bass and crappie spots for any US lake</title>
+<meta name="description" content="Find where bass and crappie are holding on any US lake today, the best times to fish, and exactly how to catch them.">
+<meta name="theme-color" content="#0B2545">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preconnect" href="https://photon.komoot.io" crossorigin>
+<link rel="preconnect" href="https://nominatim.openstreetmap.org" crossorigin>
+<link rel="preconnect" href="https://api.open-meteo.com" crossorigin>
+<link rel="preconnect" href="https://overpass-api.de" crossorigin>
+<link rel="preconnect" href="https://basemap.nationalmap.gov" crossorigin>
+  <script type="module" crossorigin src="./assets/index-C827BirE.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/style-D9_Oh02l.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="row">
+    <a class="brand" href="./" aria-label="Allen Fish Finder home">
+      <svg viewBox="0 0 34 34" width="30" height="30" aria-hidden="true"><path d="M4 17c6-8 16-8 22 0-6 8-16 8-22 0z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M26 17l5-5v10z" fill="currentColor"/><circle cx="11" cy="16" r="1.8" fill="currentColor"/></svg>
+    </a>
+    <div class="search" role="search">
+      <label for="lake-q" class="sr">Search for a lake</label>
+      <input id="lake-q" type="search" placeholder="Search a lake…" autocomplete="off" autocapitalize="words" spellcheck="false"
+        role="combobox" aria-expanded="false" aria-controls="lake-list" aria-autocomplete="list">
+      <ul id="lake-list" role="listbox" hidden></ul>
+    </div>
+    <button id="theme-btn" class="icon-btn" type="button" aria-label="Switch to night theme">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" class="ico-sun"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" class="ico-moon"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+  <div class="row">
+    <div class="seg" role="radiogroup" aria-label="Species">
+      <button type="button" role="radio" aria-checked="true" data-species="bass">Bass</button>
+      <button type="button" role="radio" aria-checked="false" data-species="crappie">Crappie</button>
+    </div>
+    <label class="date"><span class="sr">Fishing date</span>
+      <input id="date" type="date" aria-label="Fishing date">
+    </label>
+  </div>
+</header>
+
+<main>
+  <section class="mapwrap" aria-label="Lake map">
+    <div id="map"></div>
+    <div class="map-tools">
+      <button id="layer-btn" class="tool" type="button" aria-label="Change map type">Topo</button>
+      <button id="locate-btn" class="tool" type="button" aria-label="Show my location">
+        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="currentColor"/><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div id="map-msg" class="map-msg" hidden></div>
+  </section>
+
+  <section id="panel" class="panel" aria-live="polite">
+    <div id="welcome">
+      <h1>Where are they biting?</h1>
+      <p>Search any US lake, pick bass or crappie and a date. You get the spots fish are holding on, the best hours, and exactly how to fish each spot.</p>
+      <p class="chips-label">Try a well-known lake:</p>
+      <div class="chips" id="quick"></div>
+    </div>
+    <div id="results" hidden></div>
+  </section>
+</main>
+</body>
+</html>
