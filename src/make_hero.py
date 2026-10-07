@@ -1,9 +1,14 @@
 """Builds the hero backgrounds from the logo art: widens it to the left and extends the
 circuit traces out to every edge, keeping them clear of the A and the ALLEN wordmark."""
+import sys
+from pathlib import Path
+
 from PIL import Image, ImageDraw, ImageFilter
 
+sys.path.insert(0, str(Path(__file__).parent))
+from hero_traces import EXT, NODES, PAD_R, TRACES, trim  # noqa: E402
+
 SRC = "assets/img/logo-hero.jpg"
-EXT = 1000           # pixels added on the left for desktop copy
 S = 2                # supersample factor for smooth lines
 
 im = Image.open(SRC).convert("RGB")
@@ -21,53 +26,10 @@ for x in range(F):
         mp[x, y] = int(255 * x / F)
 base.paste(Image.composite(im, base.crop((EXT, 0, EXT + W, H)), mask), (EXT, 0))
 
-# 2. traces, in original-art coordinates (x offset by EXT on the wide canvas)
-o = EXT
-traces = [
-    # left bundle: five parallel traces from the left edge that fan up-right and land in a staggered pad row
-    # upper-left: branches off the vertical traces above the A, out to the left edge
-    [(1680, 150), (1560, 150), (1500, 210), (0, 210)],
-    [(1690, 120), (1540, 120), (1480, 180), (800, 180), (760, 140), (0, 140)],
-    [(1450, 0), (1450, 60), (1400, 110), (0, 110)],
-    # right side: off the big triangle's right edge, out to the right edge
-    [(o + 1021, 420), (o + 1300, 420), (o + 1340, 380), (W + EXT, 380)],
-    [(o + 990, 360), (o + 1180, 360), (o + 1220, 320), (W + EXT, 320)],
-    [(o + 1283, 820), (o + 1400, 820), (o + 1440, 860), (W + EXT, 860)],
-    [(o + 1230, 0), (o + 1230, 120), (o + 1290, 180), (W + EXT, 180)],
-    # bottom: from under the wordmark to the bottom edge
-    [(o + 560, 790), (o + 560, 860), (o + 520, 900), (o + 520, H)],
-    [(o + 1000, 790), (o + 1040, 830), (o + 1040, H)],
-    [(500, 750), (440, 810), (440, H)],
-]
-# left bundle geometry: horizontal at y_i, 45-degree rise to a pad; spacing kept at 30px
-bundle_pads = []
-for i in range(5):
-    y = 560 + 30 * i
-    xt = 1180 + 12 * i            # keeps the 45-degree legs 30px apart
-    dx = 40 + 22 * i              # staggered lengths so pads sit in a row, not on top of each other
-    pad = (xt + dx, y - dx)
-    lead = [(0, y)]
-    if i == 3:
-        lead = [(0, 690), (860, 690), (900, 650)]
-    if i == 4:
-        lead = [(0, 730), (960, 730), (1010, 680)]
-    traces.append(lead + [(xt, y), pad])
-    bundle_pads.append(pad)
-
-nodes = bundle_pads + [(1680, 150), (1690, 120),
-         (o + 1021, 420), (o + 990, 360), (o + 1283, 820), (o + 560, 790), (o + 1000, 790), (500, 750)]
-
-# stop each trace at the rim of its pad instead of running into the hole
-R = 9
-def trim(pts):
-    pts = list(pts)
-    for end, nxt in ((0, 1), (-1, -2)):
-        if pts[end] in nodes:
-            (x0, y0), (x1, y1) = pts[end], pts[nxt]
-            L = ((x1 - x0) ** 2 + (y1 - y0) ** 2) ** .5
-            pts[end] = (x0 + (x1 - x0) * R / L, y0 + (y1 - y0) * R / L)
-    return pts
-traces = [trim(t) for t in traces]
+# 2. traces: geometry lives in hero_traces.py so the animated overlay matches exactly
+traces = [trim(t) for t in TRACES]
+nodes = NODES
+R = PAD_R
 
 layer = Image.new("RGBA", ((W + EXT) * S, H * S), (0, 0, 0, 0))
 d = ImageDraw.Draw(layer)

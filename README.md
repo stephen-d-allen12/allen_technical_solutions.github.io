@@ -20,8 +20,9 @@ That regenerates every `*.html` file at the repo root and `search-index.json` (u
 | `assets/css/style.css` `:root` tokens | `theme.json` colour palette, fonts, spacing |
 | `src/parts/header.html`, `footer.html` | `parts/header.html`, `parts/footer.html` template parts |
 | Mega menus | Navigation block (or Max Mega Menu plugin) |
+| Home hero slideshow + electron tracers | Custom block pattern; the theme enqueues the same script and the trace SVG from `src/hero_traces.py` (no slider plugin needed) |
 | Header search + suggestions | Search block + SearchWP / Relevanssi (live AJAX search) |
-| Shop, cart, Client Portal | WooCommerce (Shop, Cart, Checkout, My Account) |
+| Cart, checkout, Client Portal | WooCommerce (Cart, Checkout, My Account) |
 | Pay an Invoice | WooCommerce + Stripe (WooPayments or Stripe Gateway) and PayPal Payments; or WP Simple Pay |
 | Support tickets, knowledge base | A helpdesk plugin such as Fluent Support or Awesome Support |
 | Quote / contact forms | Fluent Forms, WPForms or Gravity Forms |

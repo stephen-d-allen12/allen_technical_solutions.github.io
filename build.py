@@ -13,6 +13,7 @@ import re
 from pathlib import Path
 
 from src.icons import BRAND_MARK, icon
+from src.hero_traces import svg_overlay
 
 ROOT = Path(__file__).parent
 SRC = ROOT / "src"
@@ -79,6 +80,7 @@ def parse(path: Path):
 def render(text: str, nav: str = "") -> str:
     text = text.replace("{{brand_mark}}", BRAND_MARK)
     text = text.replace("{{circuit}}", CIRCUIT)
+    text = text.replace("{{hero_traces}}", svg_overlay())
     text = text.replace("{{chev}}", icon("chev").replace("<svg ", '<svg class="chev" ', 1))
     text = re.sub(r"\{\{icon:(\w+)\}\}", lambda m: icon(m.group(1)), text)
     text = re.sub(
