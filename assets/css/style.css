@@ -437,6 +437,15 @@ p { margin: 0 0 1em; }
 .sw-buy { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--slate-200); display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .sw-buy .price { margin: 0; }
 .sw-actions { display: flex; gap: 8px; }
+.sw-feature { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+.sw-feature-body { display: flex; flex-direction: column; height: 100%; }
+.sw-shots { display: grid; gap: 16px; }
+.sw-shot { display: block; border-radius: 12px; overflow: hidden; background: var(--navy-950); border: 1px solid var(--navy-700); box-shadow: var(--shadow); }
+.sw-shot img { display: block; width: 100%; height: auto; transition: transform .3s; }
+.sw-shot:hover img { transform: scale(1.02); }
+.sw-points { font-size: .92rem; margin-bottom: 16px; }
+.sw-points li { margin-bottom: 6px; }
+.sw-price-soon { font-size: 1.05rem; color: var(--slate-600); }
 .plan { position: relative; }
 .plan .check-list { margin-bottom: 24px; font-size: .95rem; }
 .plan .btn { margin-top: auto; }
@@ -596,6 +605,8 @@ p { margin: 0 0 1em; }
   .shop-layout { grid-template-columns: 1fr; }
   .shop-sidebar { position: static; }
   .sw-group { grid-template-columns: 1fr; gap: 16px; }
+  .sw-feature { grid-template-columns: 1fr; gap: 20px; }
+  .sw-shots { grid-template-columns: 1fr 1fr; gap: 12px; }
 }
 @media (min-width: 1181px) { .menu-close { display: none; } }
 /* Narrow screens: logo art sits centred at the top, copy below it */

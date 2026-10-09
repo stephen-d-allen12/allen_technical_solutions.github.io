@@ -3,7 +3,7 @@ heading: Software
 lead: Tools we build for engineering teams and businesses of any size. Download a free trial, then buy a license when it earns its place.
 nav: software
 description: Download free trials of Allen Technical Solutions software, buy licenses, or find installers, system requirements and license help.
-keywords: software downloads download free trial try buy license key activate installer desktop app windows linux macos data logger test sequencer can monitor j1939 spec builder quote invoice site monitor
+keywords: software downloads download free trial try buy license key activate installer desktop app windows linux macos speedplot csv log plotting data analysis ecu daq dyno test bench data logger test sequencer can monitor j1939 spec builder quote invoice site monitor
 ---
 <section class="section" id="products">
   <div class="wrap">
@@ -19,7 +19,7 @@ keywords: software downloads download free trial try buy license key activate in
         <a href="#engineering-tools">Engineering Tools</a>
         <a href="#business">Business Apps</a>
       </nav>
-      <span>Allen Fish Finder is out now. The other listings are samples: names, prices and files are placeholders until each product is released.</span>
+      <span>SpeedPlot and Allen Fish Finder are out now. The other listings are samples, with placeholder names, prices and files until each product is released.</span>
     </div>
 
     <div class="sw-group" id="outdoor">
@@ -40,9 +40,24 @@ keywords: software downloads download free trial try buy license key activate in
     <div class="sw-group" id="test">
       <div class="sw-group-head">
         <h3>Test &amp; Measurement</h3>
-        <p>Capture data and automate tests on the bench, in the test cell or in the field.</p>
+        <p>Capture and analyze test data, then automate the tests themselves, on the bench or in the field.</p>
       </div>
       <div class="grid grid-2">
+        <article class="card sw-card sw-feature span-all" id="speedplot">
+          <div class="sw-shots"><a class="sw-shot" href="assets/img/speedplot.jpg" target="_blank" rel="noopener"><img src="assets/img/speedplot.jpg" width="1400" height="780" loading="lazy" alt="SpeedPlot with four plots of engine data, A and B cursors, and an A to B statistics table"></a><a class="sw-shot" href="assets/img/speedplot-xy.jpg" target="_blank" rel="noopener"><img src="assets/img/speedplot-xy.jpg" width="1400" height="780" loading="lazy" alt="SpeedPlot plotting a million rows, with engine torque and boost pressure drawn against engine speed as an X-Y scatter"></a></div>
+          <div class="sw-feature-body">
+            <div class="sw-card-top"><div class="card-icon">{{icon:chart}}</div><div><h3>SpeedPlot</h3><span class="sw-platforms">Windows · Linux · macOS</span></div><span class="sw-badge">Out now</span></div>
+            <p>Fast plotting and analysis for engineering CSV logs from ECUs, CAN buses, DAQ systems, dynos or test benches. Drop in a folder of logs and SpeedPlot finds the time column, joins the files into one timeline and lays out your plots.</p>
+            <ul class="check-list sw-points">
+              <li>Imports 626 MB of logs (a million rows, 106 channels) in under a second on a 2015 laptop</li>
+              <li>Reads comma, semicolon, tab or pipe files, including units rows and decimal commas</li>
+              <li>Up to 8 linked plots with A/B cursors, statistics between cursors, X-Y plots and math channels</li>
+              <li>Offline license key, so it works on locked-down PCs with no activation server</li>
+            </ul>
+            <ul class="sw-meta"><li>Version 1.0.3</li><li>Perpetual license with 12 months of updates</li><li>Single user or whole site</li></ul>
+            <div class="sw-buy"><div class="price sw-price-soon">Pricing coming soon</div><div class="sw-actions"><button class="btn btn-outline btn-sm" type="button" data-trial="SpeedPlot">{{icon:download}}Try Free</button><a class="btn btn-primary btn-sm" href="contact.html">Request a Quote</a></div></div>
+          </div>
+        </article>
         <article class="card sw-card">
           <div class="sw-card-top"><div class="card-icon">{{icon:wave}}</div><div><h3>ATS Data Logger</h3><span class="sw-platforms">Windows · Linux</span></div><span class="sw-badge">Free trial</span></div>
           <p>Record, view and export test data from DAQ hardware, CAN buses or serial devices. Built for the lab bench and the field.</p>
@@ -162,6 +177,7 @@ keywords: software downloads download free trial try buy license key activate in
       <table class="sw-table">
         <thead><tr><th scope="col">Product</th><th scope="col">Latest version</th><th scope="col">Platforms</th><th scope="col"><span class="sr-only">Download</span></th></tr></thead>
         <tbody>
+          <tr><td>SpeedPlot</td><td>1.0.3</td><td>Windows, Linux, macOS</td><td><button class="btn btn-primary btn-sm" type="button" data-trial="SpeedPlot">{{icon:download}}Trial</button></td></tr>
           <tr><td>ATS Data Logger</td><td>1.0 (sample)</td><td>Windows, Linux</td><td><button class="btn btn-primary btn-sm" type="button" data-trial="ATS Data Logger">{{icon:download}}Trial</button></td></tr>
           <tr><td>ATS Test Sequencer</td><td>1.0 (sample)</td><td>Windows, Linux</td><td><button class="btn btn-primary btn-sm" type="button" data-trial="ATS Test Sequencer">{{icon:download}}Trial</button></td></tr>
           <tr><td>ATS CAN Monitor</td><td>1.0 (sample)</td><td>Windows, Linux</td><td><button class="btn btn-primary btn-sm" type="button" data-trial="ATS CAN Monitor">{{icon:download}}Trial</button></td></tr>
@@ -182,7 +198,7 @@ keywords: software downloads download free trial try buy license key activate in
     </div>
     <div class="grid grid-4">
       <div class="card"><div class="card-icon">{{icon:monitor}}</div><h3>Windows</h3><p>Windows 10 or 11, 64-bit. 4 GB RAM and 500 MB of disk space.</p></div>
-      <div class="card"><div class="card-icon">{{icon:code}}</div><h3>Linux</h3><p>Ubuntu 22.04 or later, or Debian 12, 64-bit. Real-time kernels supported.</p></div>
+      <div class="card"><div class="card-icon">{{icon:code}}</div><h3>Linux</h3><p>64-bit Ubuntu 22.04+, Debian 12+, Fedora 36+ or RHEL 9+. Real-time kernels supported.</p></div>
       <div class="card"><div class="card-icon">{{icon:box}}</div><h3>macOS</h3><p>macOS 13 or later on Apple silicon or Intel.</p></div>
       <div class="card"><div class="card-icon">{{icon:mobile}}</div><h3>Web &amp; Mobile</h3><p>Current Chrome, Edge, Safari or Firefox. iOS 16 or later, or Android 12 or later.</p></div>
     </div>
