@@ -1,0 +1,185 @@
+{
+ "updated": "2026-10-10T01:08:21.222Z",
+ "sources": [
+  {
+   "name": "Oklahoma Department of Wildlife Conservation",
+   "url": "https://www.wildlifedepartment.com/fishing/fishingreport",
+   "state": "OK",
+   "ok": true,
+   "found": 12,
+   "kept": 10,
+   "ms": 631
+  },
+  {
+   "name": "Arkansas Game and Fish weekly fishing report",
+   "url": "https://www.agfc.com/feed/",
+   "state": "AR",
+   "ok": true,
+   "found": 11,
+   "kept": 8,
+   "ms": 1378
+  },
+  {
+   "name": "Georgia Wildlife Resources fishing report",
+   "url": "https://georgiawildlife.blog/category/fishing/feed/",
+   "state": "GA",
+   "ok": true,
+   "found": 20,
+   "kept": 14,
+   "ms": 873
+  },
+  {
+   "name": "Tennessee Wildlife Resources Agency",
+   "url": "https://www.tn.gov/twra/fishing/weekly-fishing-report.html",
+   "state": "TN",
+   "ok": true,
+   "found": 4,
+   "kept": 2,
+   "ms": 417
+  },
+  {
+   "name": "Iowa DNR fishing report",
+   "url": "https://programs.iowadnr.gov/lakemanagement/FishingReport/",
+   "state": "IA",
+   "ok": true,
+   "found": 47,
+   "kept": 47,
+   "ms": 1253
+  },
+  {
+   "name": "Texas Parks and Wildlife weekly fishing report",
+   "url": "https://tpwd.texas.gov/fishboat/fish/action/reptform2.php?lake=allFresh&Submit=View+Report",
+   "state": "TX",
+   "ok": true,
+   "found": 98,
+   "kept": 0,
+   "ms": 958
+  },
+  {
+   "name": "South Carolina DNR freshwater fishing trends",
+   "url": "https://dnr.sc.gov/news/freshwater.html",
+   "state": "SC",
+   "ok": true,
+   "found": 11,
+   "kept": 11,
+   "ms": 242
+  },
+  {
+   "name": "Indiana DNR fishing reports",
+   "url": "https://www.in.gov/dnr/fish-and-wildlife/fishing/indiana-fishing-reports/",
+   "state": "IN",
+   "ok": true,
+   "found": 12,
+   "kept": 6,
+   "ms": 587
+  },
+  {
+   "name": "New York DEC fishing hotline",
+   "url": "https://www.dec.ny.gov/outdoor/9218.html",
+   "state": "NY",
+   "ok": true,
+   "found": 7,
+   "kept": 0,
+   "ms": 313
+  },
+  {
+   "name": "Kentucky Lake fishing reports",
+   "url": "https://www.explorekentuckylake.com/fishing/reports",
+   "state": "KY",
+   "ok": true,
+   "found": 4,
+   "kept": 3,
+   "ms": 434
+  },
+  {
+   "name": "SportfishingReport.com freshwater",
+   "url": "https://www.sportfishingreport.com/fish_reports/freshwater.php",
+   "state": "US",
+   "ok": true,
+   "found": 15,
+   "kept": 1,
+   "ms": 7664
+  },
+  {
+   "name": "GON forum: freshwater fishing",
+   "url": "https://forum.gon.com/forums/freshwater-fishing.7/index.rss",
+   "state": "GA",
+   "ok": true,
+   "found": 30,
+   "kept": 7,
+   "ms": 409
+  },
+  {
+   "name": "Wayne's Words forum (Lake Powell)",
+   "url": "https://wayneswords.net/forums/-/index.rss",
+   "state": "US",
+   "ok": true,
+   "found": 20,
+   "kept": 1,
+   "ms": 410
+  },
+  {
+   "name": "Major League Fishing",
+   "url": "https://majorleaguefishing.com/feed/",
+   "state": "US",
+   "ok": true,
+   "found": 10,
+   "kept": 8,
+   "ms": 585
+  },
+  {
+   "name": "Carolina Sportsman",
+   "url": "https://www.carolinasportsman.com/category/fishing/freshwater-fishing/feed/",
+   "state": "US",
+   "ok": true,
+   "found": 10,
+   "kept": 6,
+   "ms": 1342
+  },
+  {
+   "name": "Crappie NOW",
+   "url": "https://crappienow.com/feed/",
+   "state": "US",
+   "ok": true,
+   "found": 10,
+   "kept": 10,
+   "ms": 137
+  },
+  {
+   "name": "Louisiana Sportsman",
+   "url": "https://www.louisianasportsman.com/feed/",
+   "state": "LA",
+   "ok": true,
+   "found": 1,
+   "kept": 0,
+   "ms": 624
+  },
+  {
+   "name": "Mississippi Sportsman",
+   "url": "https://mississippisportsman.com/feed/",
+   "state": "MS",
+   "ok": true,
+   "found": 2,
+   "kept": 2,
+   "ms": 1101
+  },
+  {
+   "name": "Outdoor News fishing reports",
+   "url": "https://www.outdoornews.com/fishing-reports/feed/",
+   "state": "US",
+   "ok": true,
+   "found": 9,
+   "kept": 2,
+   "ms": 308
+  },
+  {
+   "name": "Wired2Fish",
+   "url": "https://www.wired2fish.com/feed",
+   "state": "US",
+   "ok": true,
+   "found": 10,
+   "kept": 3,
+   "ms": 159
+  }
+ ]
+}

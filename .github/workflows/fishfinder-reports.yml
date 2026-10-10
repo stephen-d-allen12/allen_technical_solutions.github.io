@@ -1,0 +1,59 @@
+name: Fish finder reports
+
+# Keeps the Allen Fish Finder's angler reports fresh: gathers recent state, guide and forum bass and
+# crappie reports four times a day into fishfinder/app/reports/ (one small file per state), which the
+# app reads. This workflow and the gatherer in .github/fishfinder-reports/ come from the
+# allen_fish_finder repository (scripts/reports/), and its scripts/publish.sh copies them here, so
+# change them there.
+on:
+  schedule:
+    - cron: '17 */6 * * *' # four times a day
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/fishfinder-reports/**', '.github/workflows/fishfinder-reports.yml']
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: fishfinder-reports
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Gather reports
+        # --previous keeps the date each undated page was first seen.
+        run: node .github/fishfinder-reports/collect.mjs new-reports --previous fishfinder/app/reports
+      - name: Publish them if any report changed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          changed=
+          for f in new-reports/*.json; do
+            n=$(basename "$f")
+            [ "$n" = status.json ] && continue
+            if [ "$(jq -cS .reports "$f")" != "$(jq -cS .reports "fishfinder/app/reports/$n" 2>/dev/null)" ]; then changed=1; fi
+          done
+          if [ -z "$changed" ]; then echo 'No report changed since the last run.'; exit 0; fi
+          rm -rf fishfinder/app/reports
+          mkdir -p fishfinder/app/reports
+          cp new-reports/*.json fishfinder/app/reports/
+          git add -A fishfinder/app/reports
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -qm "Fish finder angler reports $(date -u +%Y-%m-%dT%H:%MZ)"
+          # Others commit to main too: put this commit on top of theirs.
+          for i in 1 2 3; do
+            if git pull -q --rebase origin main && git push -q origin HEAD:main; then pushed=1; break; fi
+            sleep 10
+          done
+          [ -n "$pushed" ]
+          # A push made by this workflow may not start a Pages build on its own, so ask for one.
+          gh api -X POST "repos/$GITHUB_REPOSITORY/pages/builds" --silent || echo 'Could not request a Pages build; the next push will publish the reports.'

@@ -16,8 +16,8 @@
 <link rel="preconnect" href="https://api.open-meteo.com" crossorigin>
 <link rel="preconnect" href="https://overpass-api.de" crossorigin>
 <link rel="preconnect" href="https://basemap.nationalmap.gov" crossorigin>
-  <script type="module" crossorigin src="./assets/index-DY6gBBRk.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/style-DdeVzHwR.css">
+  <script type="module" crossorigin src="./assets/index-DbLbZrtQ.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/style-BkjWYUlZ.css">
 </head>
 <body>
 <header class="topbar">
@@ -31,10 +31,18 @@
         role="combobox" aria-expanded="false" aria-controls="lake-list" aria-autocomplete="list">
       <ul id="lake-list" role="listbox" hidden></ul>
     </div>
-    <button id="theme-btn" class="icon-btn" type="button" aria-label="Switch to night theme">
-      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" class="ico-sun"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" class="ico-moon"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
-    </button>
+    <div class="theme-pick">
+      <button id="theme-btn" class="icon-btn" type="button" aria-label="Theme: Sun. Change theme" aria-haspopup="menu" aria-expanded="false" aria-controls="theme-menu">
+        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" class="ico-sun"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" class="ico-calm"><path d="M7 19h10.5a4.5 4.5 0 0 0 .6-8.96A6 6 0 0 0 6.5 9.6 4.75 4.75 0 0 0 7 19z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+        <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" class="ico-moon"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+      </button>
+      <div id="theme-menu" class="theme-menu" role="menu" aria-label="Theme" hidden>
+        <button type="button" role="menuitemradio" aria-checked="true" data-pick="sun"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" class="ico-sun"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><span><b>Sun</b> Bright sunlight, strongest contrast</span></button>
+        <button type="button" role="menuitemradio" aria-checked="false" data-pick="calm"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" class="ico-calm"><path d="M7 19h10.5a4.5 4.5 0 0 0 .6-8.96A6 6 0 0 0 6.5 9.6 4.75 4.75 0 0 0 7 19z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg><span><b>Calm</b> Softer look for cloudy days and indoors</span></button>
+        <button type="button" role="menuitemradio" aria-checked="false" data-pick="night"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" class="ico-moon"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg><span><b>Night</b> Red and amber after dark</span></button>
+      </div>
+    </div>
   </div>
   <div class="row">
     <div class="seg" role="radiogroup" aria-label="Species">

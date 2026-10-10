@@ -32,7 +32,8 @@ self.addEventListener('fetch', (e) => {
     }));
     return;
   }
-  if (url.origin === location.origin) {
+  // Angler reports change a few times a day: the app fetches and caches them itself, like the data APIs.
+  if (url.origin === location.origin && !url.pathname.includes('/reports/')) {
     // App shell: stale-while-revalidate.
     e.respondWith(caches.open(SHELL).then(async (c) => {
       const hit = await c.match(req, { ignoreSearch: req.mode === 'navigate' });
