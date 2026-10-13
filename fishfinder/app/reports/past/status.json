@@ -1,0 +1,1155 @@
+{
+ "updated": "2026-10-12T03:02:59.551Z",
+ "sources": [
+  {
+   "name": "Georgia Wildlife Resources fishing report",
+   "url": "https://georgiawildlife.blog",
+   "state": "GA",
+   "ok": true,
+   "found": 0,
+   "kept": 0,
+   "through": "2026-07-29T03:02:59.551Z",
+   "from": "2014-08-01T00:00:00.000Z",
+   "complete": true,
+   "ms": 2251,
+   "checked": "2026-10-12T03:02:59.551Z"
+  },
+  {
+   "name": "Arkansas Game and Fish weekly fishing report",
+   "url": "https://www.agfc.com",
+   "state": "AR",
+   "ok": true,
+   "found": 0,
+   "kept": 0,
+   "through": "2026-07-29T03:02:59.551Z",
+   "from": "2017-01-01T00:00:00.000Z",
+   "complete": true,
+   "ms": 10822,
+   "checked": "2026-10-12T03:02:59.551Z"
+  },
+  {
+   "name": "Crappie NOW",
+   "url": "https://crappienow.com",
+   "state": "US",
+   "ok": true,
+   "found": 0,
+   "kept": 0,
+   "through": "2026-07-29T03:02:59.551Z",
+   "from": "2014-01-01T00:00:00.000Z",
+   "complete": true,
+   "ms": 4304,
+   "checked": "2026-10-12T03:02:59.551Z"
+  },
+  {
+   "name": "Texas Parks and Wildlife weekly fishing report",
+   "url": "https://tpwd.texas.gov/fishboat/fish/recreational/fishreport.phtml",
+   "state": "TX",
+   "ok": true,
+   "found": 0,
+   "kept": 0,
+   "through": "2026-07-29T03:02:59.551Z",
+   "from": "2023-01-01T00:00:00.000Z",
+   "complete": true,
+   "ms": 2801,
+   "checked": "2026-10-12T03:02:59.551Z"
+  },
+  {
+   "name": "Iowa DNR weekly fishing report (KCHA News)",
+   "url": "https://kchanews.com",
+   "state": "IA",
+   "ok": true,
+   "found": 0,
+   "kept": 0,
+   "through": "2026-07-29T03:02:59.551Z",
+   "from": "2017-01-01T00:00:00.000Z",
+   "complete": true,
+   "ms": 2431,
+   "checked": "2026-10-12T03:02:59.551Z"
+  }
+ ],
+ "robots": [
+  {
+   "url": "https://georgiawildlife.blog/robots.txt",
+   "status": 200,
+   "delay": 0
+  },
+  {
+   "url": "https://www.agfc.com/robots.txt",
+   "status": 200,
+   "delay": 10
+  },
+  {
+   "url": "https://crappienow.com/robots.txt",
+   "status": 200,
+   "delay": 0
+  },
+  {
+   "url": "https://kchanews.com/robots.txt",
+   "status": 200,
+   "delay": 0
+  },
+  {
+   "url": "https://tpwd.texas.gov/robots.txt",
+   "status": 200,
+   "delay": 0
+  }
+ ],
+ "files": {
+  "AL-01": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2025,
+    2025
+   ]
+  },
+  "AL-02": {
+   "reports": 1,
+   "kb": 0.5,
+   "years": [
+    2025,
+    2025
+   ]
+  },
+  "AL-03": {
+   "reports": 1,
+   "kb": 0.9,
+   "years": [
+    2018,
+    2018
+   ]
+  },
+  "AL-04": {
+   "reports": 1,
+   "kb": 0.7,
+   "years": [
+    2018,
+    2018
+   ]
+  },
+  "AL-05": {
+   "reports": 3,
+   "kb": 2.7,
+   "years": [
+    2017,
+    2021
+   ]
+  },
+  "AL-06": {
+   "reports": 4,
+   "kb": 3.3,
+   "years": [
+    2019,
+    2024
+   ]
+  },
+  "AL-07": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2017,
+    2017
+   ]
+  },
+  "AL-08": {
+   "reports": 1,
+   "kb": 0.9,
+   "years": [
+    2022,
+    2022
+   ]
+  },
+  "AL-09": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2025,
+    2025
+   ]
+  },
+  "AL-10": {
+   "reports": 2,
+   "kb": 1.9,
+   "years": [
+    2017,
+    2020
+   ]
+  },
+  "AL-11": {
+   "reports": 3,
+   "kb": 2.9,
+   "years": [
+    2017,
+    2025
+   ]
+  },
+  "AL-12": {
+   "reports": 2,
+   "kb": 1.9,
+   "years": [
+    2020,
+    2025
+   ]
+  },
+  "AR-01": {
+   "reports": 466,
+   "kb": 254.6,
+   "years": [
+    2018,
+    2026
+   ]
+  },
+  "AR-02": {
+   "reports": 444,
+   "kb": 248.2,
+   "years": [
+    2019,
+    2026
+   ]
+  },
+  "AR-03": {
+   "reports": 442,
+   "kb": 263.3,
+   "years": [
+    2021,
+    2026
+   ]
+  },
+  "AR-04": {
+   "reports": 462,
+   "kb": 277,
+   "years": [
+    2021,
+    2026
+   ]
+  },
+  "AR-05": {
+   "reports": 502,
+   "kb": 295.5,
+   "years": [
+    2020,
+    2026
+   ]
+  },
+  "AR-06": {
+   "reports": 491,
+   "kb": 276,
+   "years": [
+    2020,
+    2026
+   ]
+  },
+  "AR-07": {
+   "reports": 472,
+   "kb": 270.8,
+   "years": [
+    2020,
+    2026
+   ]
+  },
+  "AR-08": {
+   "reports": 502,
+   "kb": 278,
+   "years": [
+    2019,
+    2025
+   ]
+  },
+  "AR-09": {
+   "reports": 487,
+   "kb": 270.1,
+   "years": [
+    2019,
+    2025
+   ]
+  },
+  "AR-10": {
+   "reports": 417,
+   "kb": 246.8,
+   "years": [
+    2020,
+    2025
+   ]
+  },
+  "AR-11": {
+   "reports": 498,
+   "kb": 285,
+   "years": [
+    2018,
+    2025
+   ]
+  },
+  "AR-12": {
+   "reports": 387,
+   "kb": 218.5,
+   "years": [
+    2017,
+    2025
+   ]
+  },
+  "CO-06": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2018,
+    2018
+   ]
+  },
+  "FL-01": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2017,
+    2017
+   ]
+  },
+  "FL-02": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2019,
+    2019
+   ]
+  },
+  "FL-11": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2015,
+    2015
+   ]
+  },
+  "GA-01": {
+   "reports": 398,
+   "kb": 284.5,
+   "years": [
+    2020,
+    2026
+   ]
+  },
+  "GA-02": {
+   "reports": 381,
+   "kb": 273.6,
+   "years": [
+    2021,
+    2026
+   ]
+  },
+  "GA-03": {
+   "reports": 376,
+   "kb": 267.2,
+   "years": [
+    2022,
+    2026
+   ]
+  },
+  "GA-04": {
+   "reports": 416,
+   "kb": 298.6,
+   "years": [
+    2019,
+    2026
+   ]
+  },
+  "GA-05": {
+   "reports": 404,
+   "kb": 285.2,
+   "years": [
+    2021,
+    2026
+   ]
+  },
+  "GA-06": {
+   "reports": 410,
+   "kb": 293.9,
+   "years": [
+    2020,
+    2026
+   ]
+  },
+  "GA-07": {
+   "reports": 413,
+   "kb": 298.3,
+   "years": [
+    2020,
+    2026
+   ]
+  },
+  "GA-08": {
+   "reports": 360,
+   "kb": 264.7,
+   "years": [
+    2020,
+    2025
+   ]
+  },
+  "GA-09": {
+   "reports": 379,
+   "kb": 277.1,
+   "years": [
+    2020,
+    2025
+   ]
+  },
+  "GA-10": {
+   "reports": 398,
+   "kb": 286.7,
+   "years": [
+    2019,
+    2025
+   ]
+  },
+  "GA-11": {
+   "reports": 394,
+   "kb": 284.3,
+   "years": [
+    2018,
+    2025
+   ]
+  },
+  "GA-12": {
+   "reports": 378,
+   "kb": 284.2,
+   "years": [
+    2020,
+    2025
+   ]
+  },
+  "IA-01": {
+   "reports": 183,
+   "kb": 78,
+   "years": [
+    2023,
+    2026
+   ]
+  },
+  "IA-02": {
+   "reports": 88,
+   "kb": 36.6,
+   "years": [
+    2023,
+    2026
+   ]
+  },
+  "IA-03": {
+   "reports": 193,
+   "kb": 85.1,
+   "years": [
+    2023,
+    2026
+   ]
+  },
+  "IA-04": {
+   "reports": 341,
+   "kb": 162.6,
+   "years": [
+    2023,
+    2026
+   ]
+  },
+  "IA-05": {
+   "reports": 505,
+   "kb": 245.9,
+   "years": [
+    2024,
+    2026
+   ]
+  },
+  "IA-06": {
+   "reports": 478,
+   "kb": 233.4,
+   "years": [
+    2023,
+    2026
+   ]
+  },
+  "IA-07": {
+   "reports": 200,
+   "kb": 95.9,
+   "years": [
+    2023,
+    2025
+   ]
+  },
+  "IA-08": {
+   "reports": 210,
+   "kb": 105.7,
+   "years": [
+    2023,
+    2025
+   ]
+  },
+  "IA-09": {
+   "reports": 224,
+   "kb": 113.7,
+   "years": [
+    2023,
+    2025
+   ]
+  },
+  "IA-10": {
+   "reports": 334,
+   "kb": 176.4,
+   "years": [
+    2023,
+    2025
+   ]
+  },
+  "IA-11": {
+   "reports": 336,
+   "kb": 170.5,
+   "years": [
+    2022,
+    2025
+   ]
+  },
+  "IA-12": {
+   "reports": 169,
+   "kb": 77.4,
+   "years": [
+    2022,
+    2025
+   ]
+  },
+  "ID-02": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2025,
+    2025
+   ]
+  },
+  "IL-01": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2020,
+    2020
+   ]
+  },
+  "IN-09": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2018,
+    2018
+   ]
+  },
+  "IN-10": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2017,
+    2017
+   ]
+  },
+  "KS-03": {
+   "reports": 2,
+   "kb": 1.6,
+   "years": [
+    2020,
+    2022
+   ]
+  },
+  "KS-07": {
+   "reports": 2,
+   "kb": 1.9,
+   "years": [
+    2021,
+    2024
+   ]
+  },
+  "KS-12": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2024,
+    2024
+   ]
+  },
+  "KY-04": {
+   "reports": 3,
+   "kb": 2.8,
+   "years": [
+    2017,
+    2025
+   ]
+  },
+  "KY-05": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2025,
+    2025
+   ]
+  },
+  "KY-06": {
+   "reports": 1,
+   "kb": 0.9,
+   "years": [
+    2023,
+    2023
+   ]
+  },
+  "KY-09": {
+   "reports": 1,
+   "kb": 0.9,
+   "years": [
+    2023,
+    2023
+   ]
+  },
+  "KY-10": {
+   "reports": 3,
+   "kb": 2.7,
+   "years": [
+    2016,
+    2017
+   ]
+  },
+  "KY-11": {
+   "reports": 2,
+   "kb": 1.9,
+   "years": [
+    2017,
+    2020
+   ]
+  },
+  "LA-02": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2018,
+    2018
+   ]
+  },
+  "LA-04": {
+   "reports": 2,
+   "kb": 1.9,
+   "years": [
+    2019,
+    2023
+   ]
+  },
+  "MI-03": {
+   "reports": 1,
+   "kb": 0.9,
+   "years": [
+    2022,
+    2022
+   ]
+  },
+  "MN-08": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2017,
+    2017
+   ]
+  },
+  "MN-12": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2023,
+    2023
+   ]
+  },
+  "MO-03": {
+   "reports": 1,
+   "kb": 0.6,
+   "years": [
+    2023,
+    2023
+   ]
+  },
+  "MO-04": {
+   "reports": 3,
+   "kb": 2.8,
+   "years": [
+    2017,
+    2021
+   ]
+  },
+  "MO-05": {
+   "reports": 1,
+   "kb": 0.9,
+   "years": [
+    2023,
+    2023
+   ]
+  },
+  "MO-06": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2017,
+    2017
+   ]
+  },
+  "MO-08": {
+   "reports": 3,
+   "kb": 2.5,
+   "years": [
+    2015,
+    2021
+   ]
+  },
+  "MO-09": {
+   "reports": 1,
+   "kb": 0.9,
+   "years": [
+    2017,
+    2017
+   ]
+  },
+  "MO-10": {
+   "reports": 2,
+   "kb": 1.8,
+   "years": [
+    2016,
+    2022
+   ]
+  },
+  "MO-11": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2017,
+    2017
+   ]
+  },
+  "MS-01": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2021,
+    2021
+   ]
+  },
+  "MS-02": {
+   "reports": 2,
+   "kb": 2,
+   "years": [
+    2015,
+    2025
+   ]
+  },
+  "MS-03": {
+   "reports": 6,
+   "kb": 5.5,
+   "years": [
+    2014,
+    2026
+   ]
+  },
+  "MS-04": {
+   "reports": 2,
+   "kb": 1.9,
+   "years": [
+    2022,
+    2025
+   ]
+  },
+  "MS-05": {
+   "reports": 2,
+   "kb": 2,
+   "years": [
+    2017,
+    2024
+   ]
+  },
+  "MS-07": {
+   "reports": 2,
+   "kb": 1.5,
+   "years": [
+    2017,
+    2024
+   ]
+  },
+  "MS-08": {
+   "reports": 2,
+   "kb": 1.7,
+   "years": [
+    2018,
+    2023
+   ]
+  },
+  "MS-09": {
+   "reports": 2,
+   "kb": 1.7,
+   "years": [
+    2023,
+    2024
+   ]
+  },
+  "MS-10": {
+   "reports": 2,
+   "kb": 1.6,
+   "years": [
+    2018,
+    2019
+   ]
+  },
+  "MS-11": {
+   "reports": 3,
+   "kb": 2.3,
+   "years": [
+    2014,
+    2025
+   ]
+  },
+  "MS-12": {
+   "reports": 1,
+   "kb": 0.9,
+   "years": [
+    2016,
+    2016
+   ]
+  },
+  "NC-10": {
+   "reports": 1,
+   "kb": 0.8,
+   "years": [
+    2025,
+    2025
+   ]
+  },
+  "OK-05": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2024,
+    2024
+   ]
+  },
+  "OK-09": {
+   "reports": 1,
+   "kb": 0.9,
+   "years": [
+    2020,
+    2020
+   ]
+  },
+  "PA-03": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2020,
+    2020
+   ]
+  },
+  "PA-06": {
+   "reports": 1,
+   "kb": 0.9,
+   "years": [
+    2022,
+    2022
+   ]
+  },
+  "PA-12": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2020,
+    2020
+   ]
+  },
+  "SC-01": {
+   "reports": 1,
+   "kb": 1.1,
+   "years": [
+    2026,
+    2026
+   ]
+  },
+  "SC-04": {
+   "reports": 1,
+   "kb": 0.9,
+   "years": [
+    2026,
+    2026
+   ]
+  },
+  "SC-10": {
+   "reports": 1,
+   "kb": 0.9,
+   "years": [
+    2023,
+    2023
+   ]
+  },
+  "SC-12": {
+   "reports": 1,
+   "kb": 0.9,
+   "years": [
+    2021,
+    2021
+   ]
+  },
+  "TN-02": {
+   "reports": 1,
+   "kb": 0.9,
+   "years": [
+    2015,
+    2015
+   ]
+  },
+  "TN-03": {
+   "reports": 3,
+   "kb": 2.5,
+   "years": [
+    2022,
+    2026
+   ]
+  },
+  "TN-04": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2025,
+    2025
+   ]
+  },
+  "TN-05": {
+   "reports": 3,
+   "kb": 2.8,
+   "years": [
+    2021,
+    2024
+   ]
+  },
+  "TN-07": {
+   "reports": 2,
+   "kb": 1.9,
+   "years": [
+    2017,
+    2020
+   ]
+  },
+  "TN-09": {
+   "reports": 1,
+   "kb": 0.9,
+   "years": [
+    2023,
+    2023
+   ]
+  },
+  "TN-10": {
+   "reports": 1,
+   "kb": 1,
+   "years": [
+    2019,
+    2019
+   ]
+  },
+  "TN-12": {
+   "reports": 5,
+   "kb": 4.6,
+   "years": [
+    2014,
+    2025
+   ]
+  },
+  "TX-01": {
+   "reports": 391,
+   "kb": 229.8,
+   "years": [
+    2025,
+    2026
+   ]
+  },
+  "TX-02": {
+   "reports": 437,
+   "kb": 250,
+   "years": [
+    2025,
+    2026
+   ]
+  },
+  "TX-03": {
+   "reports": 451,
+   "kb": 256.1,
+   "years": [
+    2024,
+    2025
+   ]
+  },
+  "TX-04": {
+   "reports": 504,
+   "kb": 296.1,
+   "years": [
+    2024,
+    2025
+   ]
+  },
+  "TX-05": {
+   "reports": 453,
+   "kb": 262.3,
+   "years": [
+    2024,
+    2025
+   ]
+  },
+  "TX-06": {
+   "reports": 422,
+   "kb": 242,
+   "years": [
+    2024,
+    2025
+   ]
+  },
+  "TX-07": {
+   "reports": 434,
+   "kb": 254.2,
+   "years": [
+    2024,
+    2025
+   ]
+  },
+  "TX-08": {
+   "reports": 314,
+   "kb": 185.5,
+   "years": [
+    2024,
+    2025
+   ]
+  },
+  "TX-09": {
+   "reports": 354,
+   "kb": 204.6,
+   "years": [
+    2024,
+    2025
+   ]
+  },
+  "TX-10": {
+   "reports": 465,
+   "kb": 271.2,
+   "years": [
+    2024,
+    2025
+   ]
+  },
+  "TX-11": {
+   "reports": 371,
+   "kb": 214.7,
+   "years": [
+    2024,
+    2025
+   ]
+  },
+  "TX-12": {
+   "reports": 439,
+   "kb": 261.2,
+   "years": [
+    2024,
+    2025
+   ]
+  },
+  "US-01": {
+   "reports": 9,
+   "kb": 7.9,
+   "years": [
+    2015,
+    2025
+   ]
+  },
+  "US-02": {
+   "reports": 6,
+   "kb": 5.2,
+   "years": [
+    2015,
+    2023
+   ]
+  },
+  "US-03": {
+   "reports": 12,
+   "kb": 11.1,
+   "years": [
+    2016,
+    2022
+   ]
+  },
+  "US-04": {
+   "reports": 7,
+   "kb": 6.7,
+   "years": [
+    2017,
+    2019
+   ]
+  },
+  "US-05": {
+   "reports": 10,
+   "kb": 9.4,
+   "years": [
+    2014,
+    2026
+   ]
+  },
+  "US-06": {
+   "reports": 7,
+   "kb": 6.2,
+   "years": [
+    2017,
+    2026
+   ]
+  },
+  "US-07": {
+   "reports": 7,
+   "kb": 6.3,
+   "years": [
+    2014,
+    2025
+   ]
+  },
+  "US-08": {
+   "reports": 5,
+   "kb": 4.7,
+   "years": [
+    2014,
+    2025
+   ]
+  },
+  "US-09": {
+   "reports": 3,
+   "kb": 2.5,
+   "years": [
+    2018,
+    2022
+   ]
+  },
+  "US-10": {
+   "reports": 9,
+   "kb": 8.3,
+   "years": [
+    2016,
+    2024
+   ]
+  },
+  "US-11": {
+   "reports": 4,
+   "kb": 3.8,
+   "years": [
+    2015,
+    2020
+   ]
+  },
+  "US-12": {
+   "reports": 6,
+   "kb": 5.4,
+   "years": [
+    2014,
+    2024
+   ]
+  },
+  "VA-04": {
+   "reports": 1,
+   "kb": 0.9,
+   "years": [
+    2020,
+    2020
+   ]
+  }
+ }
+}

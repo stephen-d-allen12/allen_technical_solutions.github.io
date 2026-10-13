@@ -5,29 +5,44 @@ export const USER_AGENT = 'AllenFishFinderReports/1.0 (+https://stephen-d-allen1
 
 const robotsCache = new Map();
 
-/** The Disallow and Allow rules that apply to us (our own name, or *) in a robots.txt file. */
-export function robotsRules(txt, agent = 'allenfishfinderreports') {
+/** The robots.txt groups that apply to us: those naming us, or else those for *. */
+function robotsGroups(txt, agent) {
   const groups = [];
   let cur = null;
   let lastWasAgent = false;
-  for (const raw of txt.split(/\r?\n/)) {
+  let everyone = 0; // a Crawl-delay before any User-agent line asks it of every robot
+  for (const raw of String(txt).split(/\r?\n/)) {
     const line = raw.replace(/#.*/, '').trim();
     const m = line.match(/^([a-z-]+)\s*:\s*(.*)$/i);
     if (!m) continue;
     const [, k, v] = m;
     const key = k.toLowerCase();
     if (key === 'user-agent') {
-      if (!lastWasAgent) groups.push((cur = { agents: [], rules: [] }));
+      if (!lastWasAgent) groups.push((cur = { agents: [], rules: [], delay: 0 }));
       cur.agents.push(v.toLowerCase());
       lastWasAgent = true;
     } else {
       lastWasAgent = false;
       if (cur && (key === 'disallow' || key === 'allow')) cur.rules.push({ allow: key === 'allow', path: v });
+      if (key === 'crawl-delay' && Number(v) > 0) {
+        if (cur) cur.delay = Number(v);
+        else everyone = Number(v);
+      }
     }
   }
   const mine = groups.filter((g) => g.agents.some((a) => a !== '*' && agent.includes(a)));
   const chosen = mine.length ? mine : groups.filter((g) => g.agents.includes('*'));
-  return chosen.flatMap((g) => g.rules).filter((r) => r.path !== '' || !r.allow);
+  return everyone ? [...chosen, { agents: [], rules: [], delay: everyone }] : chosen;
+}
+
+/** The Disallow and Allow rules that apply to us (our own name, or *) in a robots.txt file. */
+export function robotsRules(txt, agent = 'allenfishfinderreports') {
+  return robotsGroups(txt, agent).flatMap((g) => g.rules).filter((r) => r.path !== '' || !r.allow);
+}
+
+/** The seconds robots.txt asks us to wait between requests (its Crawl-delay for us or for *), or 0. */
+export function robotsCrawlDelay(txt, agent = 'allenfishfinderreports') {
+  return Math.max(0, ...robotsGroups(txt, agent).map((g) => g.delay));
 }
 
 /** Whether robots.txt lets us fetch this path: the longest matching rule wins, Allow on a tie. */
@@ -225,6 +240,17 @@ export function slug(s) {
   return String(s).toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) || 'report';
 }
 
+/** Link fragments named after each entry's heading, so an entry keeps its link when the page reorders. */
+export function fragments() {
+  const used = new Map();
+  return (s) => {
+    const id = slug(s);
+    const n = (used.get(id) ?? 0) + 1;
+    used.set(id, n);
+    return n === 1 ? id : `${id}-${n}`;
+  };
+}
+
 /* ------------------------------------------------- only bass and crappie (Stephen's rule) */
 
 /** Fish called bass that aren't black bass, which the app doesn't cover (and Bass Pro Shops and bass boats, which aren't fish). */
@@ -264,6 +290,9 @@ export function bassCrappieOnly(text) {
       if (keep) { out.push(para); continue; }
       if (keep === false) continue;
     } else if (keep === true) {
+      // "Striper report by Captain ..." after the bass: another fish's part starts without a label.
+      const first = para.split(/(?<=[.!?])\s/)[0];
+      if (ANY_FISH.test(first) && !namesBassOrCrappie(first)) { keep = false; continue; }
       out[out.length - 1] += ` ${para}`; // one line per fish, so the app can show the one the angler picked
       continue;
     } else if (keep === false) {
@@ -274,6 +303,31 @@ export function bassCrappieOnly(text) {
     if (said.length) out.push(said.join(' '));
   }
   return out.join('\n');
+}
+
+/**
+ * One report as the app reads it, or null when it isn't about bass or crappie: Stephen's rule is
+ * that the panel only shows bass and crappie catches and tips. A report covering many fish
+ * (`trim`) keeps only its bass and crappie parts. An undated item gets `undatedDate(url, text)`.
+ */
+export function toReport(item, src, undatedDate = () => undefined) {
+  const kept = item.trim ? bassCrappieOnly(item.text ?? '') : item.text ?? '';
+  if (!namesBassOrCrappie(`${item.title ?? ''}\n${kept}`) || /^no reports?\b/i.test(kept)) return null;
+  if (!item.trim && aboutOtherFish(item.title)) return null;
+  const r = {
+    kind: item.kind ?? src.kind,
+    source: item.source ?? src.name,
+    title: clip(item.title ?? '', 200),
+    url: item.url,
+  };
+  const text = clip(kept, 700);
+  const d = item.date ? new Date(item.date) : null;
+  r.date = d && !Number.isNaN(d.getTime()) ? d.toISOString() : undatedDate(r.url, text);
+  if (text) r.text = text;
+  if (item.by) r.by = clip(item.by, 80);
+  if (item.lake ?? src.lake) r.lake = item.lake ?? src.lake;
+  if (item.state ?? src.state) r.state = item.state ?? src.state;
+  return r;
 }
 
 /** A short fingerprint of a text, to notice when an undated page changes. */

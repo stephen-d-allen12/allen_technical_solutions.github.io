@@ -1,0 +1,62 @@
+name: Fish finder past reports
+
+# Keeps the Allen Fish Finder's past-years reports up to date: once a week it reads the state
+# weekly report archives and crappie tournament stories for anything that has turned 75 days old
+# (the newer ones are in the four-times-a-day reports), and saves bass and crappie reports into
+# fishfinder/app/reports/past/ (one small file per state per month, GA-10.json holding every past
+# October's), which the app shows when a lake has no recent report. This workflow and the gatherer
+# in .github/fishfinder-reports/ come from the allen_fish_finder repository (scripts/reports/), and
+# its scripts/publish.sh copies them here, so change them there.
+on:
+  schedule:
+    - cron: '41 8 * * 1' # Mondays
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/fishfinder-reports/past*.mjs', '.github/workflows/fishfinder-past-reports.yml']
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: fishfinder-past-reports
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Gather past reports
+        # --previous: read only what is newer than last week's, and carry on a backfill that ran out of time.
+        # The gatherer stops by itself after 35 minutes with what it has.
+        run: node .github/fishfinder-reports/past.mjs new-past --previous fishfinder/app/reports/past --minutes 35
+      - name: Publish them if any report changed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          changed=
+          for f in new-past/*.json; do
+            n=$(basename "$f")
+            [ "$n" = status.json ] && continue
+            if [ "$(jq -cS .reports "$f")" != "$(jq -cS .reports "fishfinder/app/reports/past/$n" 2>/dev/null)" ]; then changed=1; fi
+          done
+          if [ -z "$changed" ]; then echo 'No past report changed since the last run.'; exit 0; fi
+          rm -rf fishfinder/app/reports/past
+          mkdir -p fishfinder/app/reports/past
+          cp new-past/*.json fishfinder/app/reports/past/
+          git add -A fishfinder/app/reports/past
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -qm "Fish finder past reports $(date -u +%Y-%m-%d)"
+          # Others commit to main too: put this commit on top of theirs.
+          for i in 1 2 3; do
+            if git pull -q --rebase origin main && git push -q origin HEAD:main; then pushed=1; break; fi
+            sleep 10
+          done
+          [ -n "$pushed" ]
+          # A push made by this workflow may not start a Pages build on its own, so ask for one.
+          gh api -X POST "repos/$GITHUB_REPOSITORY/pages/builds" --silent || echo 'Could not request a Pages build; the next push will publish the reports.'

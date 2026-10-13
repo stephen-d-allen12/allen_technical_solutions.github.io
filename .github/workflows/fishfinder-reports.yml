@@ -44,8 +44,9 @@ jobs:
             if [ "$(jq -cS .reports "$f")" != "$(jq -cS .reports "fishfinder/app/reports/$n" 2>/dev/null)" ]; then changed=1; fi
           done
           if [ -z "$changed" ]; then echo 'No report changed since the last run.'; exit 0; fi
-          rm -rf fishfinder/app/reports
+          # Replace the state files; past/ (the weekly past-years reports) stays as it is.
           mkdir -p fishfinder/app/reports
+          rm -f fishfinder/app/reports/*.json
           cp new-reports/*.json fishfinder/app/reports/
           git add -A fishfinder/app/reports
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -qm "Fish finder angler reports $(date -u +%Y-%m-%dT%H:%MZ)"

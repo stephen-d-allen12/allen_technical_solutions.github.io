@@ -3,24 +3,13 @@
 // that text), text, by?, lake?, state?, kind?, trim? }. `trim` marks a report that covers many fish:
 // the job keeps only what it says about bass and crappie. Checked October 2026; see README
 // "Angler reports".
-import { between, findDate, htmlToText, namesBassOrCrappie, parseFeed, sections, slug, stateFrom, tidyHeading } from './lib.mjs';
+import { between, findDate, fragments, htmlToText, namesBassOrCrappie, parseFeed, sections, slug, stateFrom, tidyHeading } from './lib.mjs';
 
 const FEED = 'application/rss+xml, application/atom+xml, application/xml, text/xml';
 const HTML = 'text/html';
 const iso = (d) => d?.toISOString();
 const abs = (href, base) => new URL(decodeEntitiesInHref(href), base).href;
 const decodeEntitiesInHref = (h) => h.replace(/&amp;/g, '&');
-
-/** Link fragments named after each entry's heading, so an entry keeps its link when the page reorders. */
-function fragments() {
-  const used = new Map();
-  return (s) => {
-    const id = slug(s);
-    const n = (used.get(id) ?? 0) + 1;
-    used.set(id, n);
-    return n === 1 ? id : `${id}-${n}`;
-  };
-}
 
 /** A feed whose posts are each about one lake or one topic (or, with `split`, a roundup to split by heading). */
 function feed({ name, kind, state, url, keep = () => true, split = false }) {

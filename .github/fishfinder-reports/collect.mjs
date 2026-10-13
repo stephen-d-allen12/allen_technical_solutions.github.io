@@ -4,7 +4,7 @@
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { SOURCES } from './sources.mjs';
-import { aboutOtherFish, bassCrappieOnly, clip, fetchText, fingerprint, namesBassOrCrappie, pool, SkipError } from './lib.mjs';
+import { fetchText, fingerprint, pool, SkipError, toReport } from './lib.mjs';
 
 const args = process.argv.slice(2);
 const outDir = args.find((a, i) => !a.startsWith('--') && !['--dump', '--only', '--previous'].includes(args[i - 1])) ?? 'reports-out';
@@ -39,29 +39,10 @@ async function fetchAndKeep(url, opts) {
 }
 
 /**
- * One report as the app reads it, or null when it isn't about bass or crappie: Stephen's rule is
- * that the panel only shows bass and crappie catches and tips. A report covering many fish keeps
- * only its bass and crappie parts.
+ * One report as the app reads it, or null when it isn't about bass or crappie (see toReport). An
+ * undated page is dated by when the job first saw its text.
  */
-function normalize(item, src) {
-  const kept = item.trim ? bassCrappieOnly(item.text ?? '') : item.text ?? '';
-  if (!namesBassOrCrappie(`${item.title ?? ''}\n${kept}`) || /^no reports?\b/i.test(kept)) return null;
-  if (!item.trim && aboutOtherFish(item.title)) return null;
-  const r = {
-    kind: item.kind ?? src.kind,
-    source: item.source ?? src.name,
-    title: clip(item.title ?? '', 200),
-    url: item.url,
-  };
-  const text = clip(kept, 700);
-  const d = item.date ? new Date(item.date) : null;
-  r.date = d && !Number.isNaN(d.getTime()) ? d.toISOString() : firstSeen.get(`${r.url}|${fingerprint(text)}`) ?? new Date(now).toISOString();
-  if (text) r.text = text;
-  if (item.by) r.by = clip(item.by, 80);
-  if (item.lake ?? src.lake) r.lake = item.lake ?? src.lake;
-  if (item.state ?? src.state) r.state = item.state ?? src.state;
-  return r;
-}
+const normalize = (item, src) => toReport(item, src, (url, text) => firstSeen.get(`${url}|${fingerprint(text)}`) ?? new Date(now).toISOString());
 
 const recent = (date) => {
   const t = Date.parse(date);
