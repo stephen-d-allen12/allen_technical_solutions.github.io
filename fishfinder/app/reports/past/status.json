@@ -1,31 +1,31 @@
 {
- "updated": "2026-10-12T03:02:59.551Z",
+ "updated": "2026-10-19T09:16:45.318Z",
  "sources": [
   {
    "name": "Georgia Wildlife Resources fishing report",
    "url": "https://georgiawildlife.blog",
    "state": "GA",
    "ok": true,
-   "found": 0,
-   "kept": 0,
-   "through": "2026-07-29T03:02:59.551Z",
+   "found": 25,
+   "kept": 15,
+   "through": "2026-08-05T09:16:45.318Z",
    "from": "2014-08-01T00:00:00.000Z",
    "complete": true,
-   "ms": 2251,
-   "checked": "2026-10-12T03:02:59.551Z"
+   "ms": 2051,
+   "checked": "2026-10-19T09:16:45.318Z"
   },
   {
    "name": "Arkansas Game and Fish weekly fishing report",
    "url": "https://www.agfc.com",
    "state": "AR",
    "ok": true,
-   "found": 0,
-   "kept": 0,
-   "through": "2026-07-29T03:02:59.551Z",
+   "found": 41,
+   "kept": 6,
+   "through": "2026-08-05T09:16:45.318Z",
    "from": "2017-01-01T00:00:00.000Z",
    "complete": true,
-   "ms": 10822,
-   "checked": "2026-10-12T03:02:59.551Z"
+   "ms": 11319,
+   "checked": "2026-10-19T09:16:45.318Z"
   },
   {
    "name": "Crappie NOW",
@@ -34,24 +34,25 @@
    "ok": true,
    "found": 0,
    "kept": 0,
-   "through": "2026-07-29T03:02:59.551Z",
+   "through": "2026-08-05T09:16:45.318Z",
    "from": "2014-01-01T00:00:00.000Z",
    "complete": true,
-   "ms": 4304,
-   "checked": "2026-10-12T03:02:59.551Z"
+   "ms": 5437,
+   "checked": "2026-10-19T09:16:45.318Z"
   },
   {
    "name": "Texas Parks and Wildlife weekly fishing report",
    "url": "https://tpwd.texas.gov/fishboat/fish/recreational/fishreport.phtml",
    "state": "TX",
-   "ok": true,
+   "ok": false,
    "found": 0,
    "kept": 0,
+   "error": "fetch failed",
    "through": "2026-07-29T03:02:59.551Z",
    "from": "2023-01-01T00:00:00.000Z",
    "complete": true,
-   "ms": 2801,
-   "checked": "2026-10-12T03:02:59.551Z"
+   "ms": 6316,
+   "checked": "2026-10-19T09:16:45.318Z"
   },
   {
    "name": "Iowa DNR weekly fishing report (KCHA News)",
@@ -60,11 +61,11 @@
    "ok": true,
    "found": 0,
    "kept": 0,
-   "through": "2026-07-29T03:02:59.551Z",
+   "through": "2026-08-05T09:16:45.318Z",
    "from": "2017-01-01T00:00:00.000Z",
    "complete": true,
-   "ms": 2431,
-   "checked": "2026-10-12T03:02:59.551Z"
+   "ms": 2311,
+   "checked": "2026-10-19T09:16:45.318Z"
   }
  ],
  "robots": [
@@ -85,11 +86,6 @@
   },
   {
    "url": "https://kchanews.com/robots.txt",
-   "status": 200,
-   "delay": 0
-  },
-  {
-   "url": "https://tpwd.texas.gov/robots.txt",
    "status": 200,
    "delay": 0
   }
@@ -240,8 +236,8 @@
    ]
   },
   "AR-07": {
-   "reports": 472,
-   "kb": 270.8,
+   "reports": 478,
+   "kb": 274.3,
    "years": [
     2020,
     2026
@@ -368,12 +364,13 @@
    ]
   },
   "GA-07": {
-   "reports": 413,
-   "kb": 298.3,
+   "reports": 376,
+   "kb": 269.1,
    "years": [
-    2020,
+    2021,
     2026
-   ]
+   ],
+   "dropped": 52
   },
   "GA-08": {
    "reports": 360,
