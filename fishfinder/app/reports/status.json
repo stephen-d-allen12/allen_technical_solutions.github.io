@@ -1,14 +1,14 @@
 {
- "updated": "2026-10-30T05:52:52.892Z",
+ "updated": "2026-10-30T12:59:06.501Z",
  "sources": [
   {
    "name": "Oklahoma Department of Wildlife Conservation",
    "url": "https://www.wildlifedepartment.com/fishing/fishingreport",
    "state": "OK",
    "ok": true,
-   "found": 4,
-   "kept": 4,
-   "ms": 2004
+   "found": 5,
+   "kept": 5,
+   "ms": 637
   },
   {
    "name": "Arkansas Game and Fish weekly fishing report",
@@ -17,7 +17,7 @@
    "ok": true,
    "found": 12,
    "kept": 8,
-   "ms": 524
+   "ms": 262
   },
   {
    "name": "Georgia Wildlife Resources fishing report",
@@ -26,17 +26,16 @@
    "ok": true,
    "found": 25,
    "kept": 18,
-   "ms": 727
+   "ms": 193
   },
   {
    "name": "Tennessee Wildlife Resources Agency",
    "url": "https://www.tn.gov/twra/fishing/weekly-fishing-report.html",
    "state": "TN",
-   "ok": false,
-   "found": 0,
-   "kept": 0,
-   "ms": 904,
-   "error": "HTTP 403"
+   "ok": true,
+   "found": 4,
+   "kept": 2,
+   "ms": 2804
   },
   {
    "name": "Iowa DNR fishing report",
@@ -45,7 +44,7 @@
    "ok": true,
    "found": 55,
    "kept": 55,
-   "ms": 1805
+   "ms": 1214
   },
   {
    "name": "Texas Parks and Wildlife weekly fishing report",
@@ -54,7 +53,7 @@
    "ok": true,
    "found": 98,
    "kept": 0,
-   "ms": 1117
+   "ms": 992
   },
   {
    "name": "South Carolina DNR freshwater fishing trends",
@@ -63,7 +62,7 @@
    "ok": true,
    "found": 11,
    "kept": 11,
-   "ms": 479
+   "ms": 582
   },
   {
    "name": "Indiana DNR fishing reports",
@@ -72,7 +71,7 @@
    "ok": true,
    "found": 12,
    "kept": 6,
-   "ms": 1318
+   "ms": 633
   },
   {
    "name": "New York DEC fishing hotline",
@@ -81,7 +80,7 @@
    "ok": true,
    "found": 7,
    "kept": 4,
-   "ms": 1263
+   "ms": 839
   },
   {
    "name": "Kentucky Lake fishing reports",
@@ -90,7 +89,7 @@
    "ok": true,
    "found": 4,
    "kept": 2,
-   "ms": 16419
+   "ms": 8799
   },
   {
    "name": "SportfishingReport.com freshwater",
@@ -99,7 +98,7 @@
    "ok": true,
    "found": 16,
    "kept": 2,
-   "ms": 3746
+   "ms": 3430
   },
   {
    "name": "GON forum: freshwater fishing",
@@ -108,7 +107,7 @@
    "ok": false,
    "found": 0,
    "kept": 0,
-   "ms": 463,
+   "ms": 579,
    "error": "HTTP 403"
   },
   {
@@ -118,7 +117,7 @@
    "ok": true,
    "found": 20,
    "kept": 1,
-   "ms": 599
+   "ms": 464
   },
   {
    "name": "Major League Fishing",
@@ -127,7 +126,7 @@
    "ok": true,
    "found": 10,
    "kept": 9,
-   "ms": 711
+   "ms": 1147
   },
   {
    "name": "Carolina Sportsman",
@@ -136,16 +135,17 @@
    "ok": true,
    "found": 10,
    "kept": 6,
-   "ms": 1862
+   "ms": 1632
   },
   {
    "name": "Crappie NOW",
    "url": "https://crappienow.com/feed/",
    "state": "US",
-   "ok": true,
-   "found": 10,
-   "kept": 10,
-   "ms": 842
+   "ok": false,
+   "found": 0,
+   "kept": 0,
+   "ms": 5219,
+   "error": "fetch failed"
   },
   {
    "name": "Louisiana Sportsman",
@@ -154,7 +154,7 @@
    "ok": true,
    "found": 2,
    "kept": 1,
-   "ms": 995
+   "ms": 779
   },
   {
    "name": "Mississippi Sportsman",
@@ -163,7 +163,7 @@
    "ok": true,
    "found": 1,
    "kept": 1,
-   "ms": 1201
+   "ms": 1161
   },
   {
    "name": "Outdoor News fishing reports",
@@ -172,7 +172,7 @@
    "ok": true,
    "found": 9,
    "kept": 3,
-   "ms": 777
+   "ms": 676
   },
   {
    "name": "Wired2Fish",
@@ -181,7 +181,7 @@
    "ok": true,
    "found": 10,
    "kept": 3,
-   "ms": 291
+   "ms": 308
   }
  ]
 }
