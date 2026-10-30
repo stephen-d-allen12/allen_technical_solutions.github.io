@@ -16,8 +16,8 @@
 <link rel="preconnect" href="https://api.open-meteo.com" crossorigin>
 <link rel="preconnect" href="https://overpass-api.de" crossorigin>
 <link rel="preconnect" href="https://basemap.nationalmap.gov" crossorigin>
-  <script type="module" crossorigin src="./assets/index-kwzUDX9p.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/style-CikFWfFt.css">
+  <script type="module" crossorigin src="./assets/index-3IovMJbO.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/style-5BLkNIRr.css">
 </head>
 <body>
 <header class="topbar">
@@ -30,6 +30,7 @@
       <!-- Fresh or salt water, always at hand next to the search it changes (Stephen, 2026-10-30). -->
       <label class="water-pick"><span class="cap" aria-hidden="true">Water</span>
         <select id="water" aria-label="Water"><option value="fresh" selected>Fresh</option><option value="salt">Salt</option></select>
+        <svg class="chev" viewBox="0 0 12 8" width="12" height="8" aria-hidden="true"><path d="M1.5 1.5l4.5 4.5 4.5-4.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </label>
       <label for="lake-q" id="lake-q-label" class="sr">Search for a lake</label>
       <input id="lake-q" type="search" placeholder="Search" autocomplete="off" autocapitalize="words" spellcheck="false"
@@ -62,8 +63,11 @@
       <button type="button" role="radio" aria-checked="true" data-species="bass">Bass</button>
       <button type="button" role="radio" aria-checked="false" data-species="crappie">Crappie</button>
     </div>
+    <!-- The fish's name shows in the box, on two lines when it is long; the list lies on top of it to tap. -->
     <label class="fish-pick" hidden><span class="date-cap" aria-hidden="true">Fish</span>
+      <span id="fish-shown" class="fish-shown" aria-hidden="true">Pick a fish</span>
       <select id="fish" aria-label="Fish"></select>
+      <svg class="chev" viewBox="0 0 12 8" width="12" height="8" aria-hidden="true"><path d="M1.5 1.5l4.5 4.5 4.5-4.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </label>
     <label class="date"><span class="date-cap" aria-hidden="true">Fishing Day</span>
       <input id="date" type="date" aria-label="Fishing Day">
