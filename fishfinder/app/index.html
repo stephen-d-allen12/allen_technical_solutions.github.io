@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Allen Fish Finder: what anglers report on any US lake</title>
-<meta name="description" content="What state agencies, guides and anglers report for bass and crappie on any US lake: the baits, depths and places they name, with the day's conditions.">
+<meta name="description" content="What state agencies, guides and anglers report for bass and crappie on any US lake, and for harbor and inshore fish on any US bay or pier: the baits, depths and places they name, with the day's conditions and tides.">
 <meta name="theme-color" content="#0B2545">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -16,8 +16,8 @@
 <link rel="preconnect" href="https://api.open-meteo.com" crossorigin>
 <link rel="preconnect" href="https://overpass-api.de" crossorigin>
 <link rel="preconnect" href="https://basemap.nationalmap.gov" crossorigin>
-  <script type="module" crossorigin src="./assets/index-FMB10jd0.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/style-lfLSHrtZ.css">
+  <script type="module" crossorigin src="./assets/index-kwzUDX9p.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/style-CikFWfFt.css">
 </head>
 <body>
 <header class="topbar">
@@ -27,8 +27,12 @@
       <span>Home</span>
     </a>
     <div class="search" role="search">
-      <label for="lake-q" class="sr">Search for a lake</label>
-      <input id="lake-q" type="search" placeholder="Search a lake…" autocomplete="off" autocapitalize="words" spellcheck="false"
+      <!-- Fresh or salt water, always at hand next to the search it changes (Stephen, 2026-10-30). -->
+      <label class="water-pick"><span class="cap" aria-hidden="true">Water</span>
+        <select id="water" aria-label="Water"><option value="fresh" selected>Fresh</option><option value="salt">Salt</option></select>
+      </label>
+      <label for="lake-q" id="lake-q-label" class="sr">Search for a lake</label>
+      <input id="lake-q" type="search" placeholder="Search" autocomplete="off" autocapitalize="words" spellcheck="false"
         role="combobox" aria-expanded="false" aria-controls="lake-list" aria-autocomplete="list">
       <ul id="lake-list" role="listbox" hidden></ul>
     </div>
@@ -38,11 +42,11 @@
         <span>Menu</span>
       </button>
       <div id="menu-panel" class="menu-panel" role="region" aria-label="Menu" hidden>
-        <div class="menu-top"><h2>My lakes</h2><button id="menu-close" type="button" class="menu-close">Close</button></div>
+        <div class="menu-top"><h2 id="my-head">My lakes</h2><button id="menu-close" type="button" class="menu-close">Close</button></div>
         <ul id="my-lakes" class="my-lakes"></ul>
         <p id="my-lakes-none" class="menu-note">Tap <b>☆ Save lake</b> under a lake's name to keep it here.</p>
         <h2>Colors</h2>
-        <div class="color-picks" role="radiogroup" aria-label="Colors">
+        <div class="picks color-picks" role="radiogroup" aria-label="Colors">
           <button type="button" role="radio" aria-checked="true" data-pick="sun"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" class="ico-sun"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><span><b>Sun</b> Bright sunlight, strongest contrast</span></button>
           <button type="button" role="radio" aria-checked="false" data-pick="calm"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" class="ico-calm"><path d="M7 19h10.5a4.5 4.5 0 0 0 .6-8.96A6 6 0 0 0 6.5 9.6 4.75 4.75 0 0 0 7 19z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg><span><b>Calm</b> Softer look for cloudy days and indoors</span></button>
           <button type="button" role="radio" aria-checked="false" data-pick="night"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" class="ico-moon"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg><span><b>Night</b> Red and amber after dark</span></button>
@@ -58,6 +62,9 @@
       <button type="button" role="radio" aria-checked="true" data-species="bass">Bass</button>
       <button type="button" role="radio" aria-checked="false" data-species="crappie">Crappie</button>
     </div>
+    <label class="fish-pick" hidden><span class="date-cap" aria-hidden="true">Fish</span>
+      <select id="fish" aria-label="Fish"></select>
+    </label>
     <label class="date"><span class="date-cap" aria-hidden="true">Fishing Day</span>
       <input id="date" type="date" aria-label="Fishing Day">
     </label>
@@ -88,11 +95,17 @@
   <section id="panel" class="panel" aria-live="polite">
     <div id="welcome">
       <h1>Where are they biting?</h1>
-      <p>Search any US lake, pick bass or crappie and a fishing day. You get what anglers, guides and state reports say is working there: the baits, depths and places they name, plus the day's wind, weather and water temperature.</p>
+      <div class="water-start" role="radiogroup" aria-label="Fresh or salt water">
+        <button type="button" role="radio" aria-checked="true" data-water="fresh"><b>Fresh water</b><span>Bass and crappie on lakes</span></button>
+        <button type="button" role="radio" aria-checked="false" data-water="salt"><b>Salt water</b><span>Harbor and inshore fish</span></button>
+      </div>
+      <p id="welcome-fresh">Search any US lake, pick bass or crappie and a fishing day. You get what anglers, guides and state reports say is working there: the baits, depths and places they name, plus the day's wind, weather and water temperature.</p>
+      <p id="welcome-salt" hidden>Search any US bay, harbor, inlet, beach or pier and pick your fish. You get what anglers, guides and state reports say is working there: the baits, depths and places they name, plus the day's tides, wind, weather and water temperature.</p>
       <div id="my-start" hidden>
-        <p class="chips-label">Your lakes:</p>
+        <p class="chips-label" id="my-start-label">Your lakes:</p>
         <div class="chips" id="my-chips"></div>
       </div>
+      <div id="salt-list" hidden></div>
     </div>
     <div id="results" hidden></div>
   </section>
