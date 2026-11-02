@@ -1,18 +1,18 @@
 {
- "updated": "2026-10-26T09:22:53.934Z",
+ "updated": "2026-11-02T18:50:09.020Z",
  "sources": [
   {
    "name": "Georgia Wildlife Resources fishing report",
    "url": "https://georgiawildlife.blog",
    "state": "GA",
    "ok": true,
-   "found": 18,
+   "found": 12,
    "kept": 6,
-   "through": "2026-08-12T09:22:53.934Z",
+   "through": "2026-08-19T18:50:09.020Z",
    "from": "2014-08-01T00:00:00.000Z",
    "complete": true,
-   "ms": 2166,
-   "checked": "2026-10-26T09:22:53.934Z"
+   "ms": 2292,
+   "checked": "2026-11-02T18:50:09.020Z"
   },
   {
    "name": "Arkansas Game and Fish weekly fishing report",
@@ -20,12 +20,12 @@
    "state": "AR",
    "ok": true,
    "found": 42,
-   "kept": 7,
-   "through": "2026-08-12T09:22:53.934Z",
+   "kept": 8,
+   "through": "2026-08-19T18:50:09.020Z",
    "from": "2017-01-01T00:00:00.000Z",
    "complete": true,
-   "ms": 10692,
-   "checked": "2026-10-26T09:22:53.934Z"
+   "ms": 10901,
+   "checked": "2026-11-02T18:50:09.020Z"
   },
   {
    "name": "Crappie NOW",
@@ -34,11 +34,11 @@
    "ok": true,
    "found": 0,
    "kept": 0,
-   "through": "2026-08-12T09:22:53.934Z",
+   "through": "2026-08-19T18:50:09.020Z",
    "from": "2014-01-01T00:00:00.000Z",
    "complete": true,
-   "ms": 4376,
-   "checked": "2026-10-26T09:22:53.934Z"
+   "ms": 4191,
+   "checked": "2026-11-02T18:50:09.020Z"
   },
   {
    "name": "Texas Parks and Wildlife weekly fishing report",
@@ -47,24 +47,24 @@
    "ok": true,
    "found": 0,
    "kept": 0,
-   "through": "2026-08-12T09:22:53.934Z",
+   "through": "2026-08-19T18:50:09.020Z",
    "from": "2023-01-01T00:00:00.000Z",
    "complete": true,
-   "ms": 2181,
-   "checked": "2026-10-26T09:22:53.934Z"
+   "ms": 2316,
+   "checked": "2026-11-02T18:50:09.020Z"
   },
   {
    "name": "Iowa DNR weekly fishing report (KCHA News)",
    "url": "https://kchanews.com",
    "state": "IA",
    "ok": true,
-   "found": 91,
-   "kept": 41,
-   "through": "2026-08-12T09:22:53.934Z",
+   "found": 101,
+   "kept": 23,
+   "through": "2026-08-19T18:50:09.020Z",
    "from": "2017-01-01T00:00:00.000Z",
    "complete": true,
-   "ms": 2241,
-   "checked": "2026-10-26T09:22:53.934Z"
+   "ms": 2381,
+   "checked": "2026-11-02T18:50:09.020Z"
   }
  ],
  "robots": [
@@ -248,8 +248,8 @@
    ]
   },
   "AR-08": {
-   "reports": 508,
-   "kb": 281.2,
+   "reports": 516,
+   "kb": 285.9,
    "years": [
     2019,
     2026
@@ -376,8 +376,8 @@
    ]
   },
   "GA-08": {
-   "reports": 366,
-   "kb": 269.6,
+   "reports": 372,
+   "kb": 274.8,
    "years": [
     2020,
     2026
@@ -472,8 +472,8 @@
    ]
   },
   "IA-08": {
-   "reports": 251,
-   "kb": 127.2,
+   "reports": 274,
+   "kb": 137.9,
    "years": [
     2023,
     2026
