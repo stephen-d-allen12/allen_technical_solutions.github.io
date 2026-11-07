@@ -13,6 +13,17 @@ python3 build.py
 
 That regenerates every `*.html` file at the repo root and `search-index.json` (used by the header search box).
 
+## WordPress version
+
+```
+python3 build.py && python3 wordpress/build_theme.py
+```
+
+builds `wordpress/dist/allen-technical-solutions/`, a classic WordPress theme with the same header, footer,
+styles and scripts. Activating it creates every page with the preview's content, sets Home as the front page
+and turns on `/%postname%/` permalinks. Pages that already exist are never overwritten.
+Zip that folder to install it from Appearance → Themes → Add New → Upload Theme.
+
 ## How this maps to WordPress
 
 | Preview | WordPress block theme |
