@@ -185,8 +185,8 @@
   "title": "Industries",
   "url": "industries.html",
   "summary": "Industries Allen Technical Solutions serves: automotive, commercial vehicles, automation, test labs, aerospace, medical devices, A/V, construction and businesses of any size.",
-  "keywords": "industries sectors markets clients automotive engines diesel commercial vehicles transportation automation industrial test labs aerospace medical audio video construction business startups retail",
-  "text": "Automotive & Commercial Vehicles Powertrain controls, vehicle controls, calibration, simulators and field data logging for on-highway or off-highway programs. Automation Real-time control platforms, industrial communications, test fixtures and machine safety for automated equipment. Test & Measurement Labs Test-cell controls, chassis dynos, HIL simulation, data acquisition and automated test environments. Aerospace & Defense Test fixtures, data acquisition and documentation to demanding standards. Medical Devices Embedded firmware, test equipment and design-history documentation support. Audio & Video A/V system design, custom instrumentation and test setups for studios, venues or products. Businesses of Any Size Websites, online stores, custom software and engineering support for companies at every stage, from startup to established firm. Construction & AEC Estimating tools, field apps, document control and project workflows."
+  "keywords": "industries sectors markets clients automotive engines diesel commercial vehicles transportation automation industrial test labs aerospace medical audio video construction business startups retail av equipment setup installation wiring support",
+  "text": "Automotive & Commercial Vehicles Powertrain controls, vehicle controls, calibration, simulators and field data logging for on-highway or off-highway programs. Automation Real-time control platforms, industrial communications, test fixtures and machine safety for automated equipment. Test & Measurement Labs Test-cell controls, chassis dynos, HIL simulation, data acquisition and automated test environments. Aerospace & Defense Test fixtures, data acquisition and documentation to demanding standards. Medical Devices Embedded firmware, test equipment and design-history documentation support. A/V Support & Services Selected support and services for audio-video systems: equipment setup, installation, wiring and troubleshooting for churches, offices, venues and test labs. Businesses of Any Size Websites, online stores, custom software and engineering support for companies at every stage, from startup to established firm. Construction & AEC Estimating tools, field apps, document control and project workflows."
  },
  {
   "title": "Automotive & Commercial Vehicles \u00b7 Industries",
@@ -224,11 +224,11 @@
   "text": "Medical Devices Embedded firmware, test equipment and design-history documentation support."
  },
  {
-  "title": "Audio & Video \u00b7 Industries",
+  "title": "A/V Support & Services \u00b7 Industries",
   "url": "industries.html#audio-video",
-  "summary": "A/V system design, custom instrumentation and test setups for studios, venues or products.",
+  "summary": "Selected support and services for audio-video systems: equipment setup, installation, wiring and troubleshooting for churches, offices, venues and test labs.",
   "keywords": "",
-  "text": "Audio & Video A/V system design, custom instrumentation and test setups for studios, venues or products."
+  "text": "A/V Support & Services Selected support and services for audio-video systems: equipment setup, installation, wiring and troubleshooting for churches, offices, venues and test labs."
  },
  {
   "title": "Businesses of Any Size \u00b7 Industries",
@@ -284,7 +284,7 @@
   "url": "projects.html",
   "summary": "Selected engineering, consulting and software experience from Allen Technical Solutions.",
   "keywords": "projects portfolio case studies experience work examples test cell hil simulators data loggers",
-  "text": "All Engineering Consulting Software Engineering Real-time test-cell controls Project leadership for hardware-agnostic, Linux-based real-time control systems running automotive chassis and engine test cells. The work covered the API, operator interface and release management. Engineering HIL & vehicle simulators Hardware-in-the-loop simulators, custom vehicle simulators and engineering test tools, supported for use across controls teams. Engineering Field test data loggers Field test data loggers and custom test fixtures, designed to improve product reliability. Consulting OEM controls integration, Central Europe Five years on the ground in Germany managing OEM relationships, writing technical specifications and hosting the regional controls platform. Software Automated test-cell simulation A Six Sigma project simulating advanced test cells that expanded automated testing capability for controls releases. Consulting Audio, video & test instrumentation Independent consulting on audio-video projects and custom test instrumentation for clients."
+  "text": "All Engineering Consulting Software Engineering Real-time test-cell controls Project leadership for hardware-agnostic, Linux-based real-time control systems running automotive chassis and engine test cells. The work covered the API, operator interface and release management. Engineering HIL & vehicle simulators Hardware-in-the-loop simulators, custom vehicle simulators and engineering test tools, supported for use across controls teams. Engineering Field test data loggers Field test data loggers and custom test fixtures, designed to improve product reliability. Consulting OEM controls integration, Central Europe Five years on the ground in Germany managing OEM relationships, writing technical specifications and hosting the regional controls platform. Software Automated test-cell simulation A Six Sigma project simulating advanced test cells that expanded automated testing capability for controls releases. Consulting A/V support & test instrumentation Audio-video equipment setup and support, plus custom test instrumentation for clients."
  },
  {
   "title": "Real-time test-cell controls \u00b7 Projects",
@@ -322,11 +322,11 @@
   "text": "Software Automated test-cell simulation A Six Sigma project simulating advanced test cells that expanded automated testing capability for controls releases."
  },
  {
-  "title": "Audio, video & test instrumentation \u00b7 Projects",
+  "title": "A/V support & test instrumentation \u00b7 Projects",
   "url": "projects.html#p6",
-  "summary": "rumentation Independent consulting on audio-video projects and custom test instrumentation for clients.",
+  "summary": "rumentation Audio-video equipment setup and support, plus custom test instrumentation for clients.",
   "keywords": "",
-  "text": "Consulting Audio, video & test instrumentation Independent consulting on audio-video projects and custom test instrumentation for clients."
+  "text": "Consulting A/V support & test instrumentation Audio-video equipment setup and support, plus custom test instrumentation for clients."
  },
  {
   "title": "Services",
