@@ -1,31 +1,31 @@
 {
- "updated": "2026-11-02T18:50:09.020Z",
+ "updated": "2026-11-09T19:09:20.345Z",
  "sources": [
   {
    "name": "Georgia Wildlife Resources fishing report",
    "url": "https://georgiawildlife.blog",
    "state": "GA",
    "ok": true,
-   "found": 12,
-   "kept": 6,
-   "through": "2026-08-19T18:50:09.020Z",
+   "found": 0,
+   "kept": 0,
+   "through": "2026-08-26T19:09:20.345Z",
    "from": "2014-08-01T00:00:00.000Z",
    "complete": true,
-   "ms": 2292,
-   "checked": "2026-11-02T18:50:09.020Z"
+   "ms": 2175,
+   "checked": "2026-11-09T19:09:20.345Z"
   },
   {
    "name": "Arkansas Game and Fish weekly fishing report",
    "url": "https://www.agfc.com",
    "state": "AR",
    "ok": true,
-   "found": 42,
-   "kept": 8,
-   "through": "2026-08-19T18:50:09.020Z",
+   "found": 43,
+   "kept": 6,
+   "through": "2026-08-26T19:09:20.345Z",
    "from": "2017-01-01T00:00:00.000Z",
    "complete": true,
-   "ms": 10901,
-   "checked": "2026-11-02T18:50:09.020Z"
+   "ms": 11131,
+   "checked": "2026-11-09T19:09:20.345Z"
   },
   {
    "name": "Crappie NOW",
@@ -34,11 +34,11 @@
    "ok": true,
    "found": 0,
    "kept": 0,
-   "through": "2026-08-19T18:50:09.020Z",
+   "through": "2026-08-26T19:09:20.345Z",
    "from": "2014-01-01T00:00:00.000Z",
    "complete": true,
-   "ms": 4191,
-   "checked": "2026-11-02T18:50:09.020Z"
+   "ms": 4245,
+   "checked": "2026-11-09T19:09:20.345Z"
   },
   {
    "name": "Texas Parks and Wildlife weekly fishing report",
@@ -47,32 +47,27 @@
    "ok": true,
    "found": 0,
    "kept": 0,
-   "through": "2026-08-19T18:50:09.020Z",
+   "through": "2026-08-26T19:09:20.345Z",
    "from": "2023-01-01T00:00:00.000Z",
    "complete": true,
-   "ms": 2316,
-   "checked": "2026-11-02T18:50:09.020Z"
+   "ms": 2536,
+   "checked": "2026-11-09T19:09:20.345Z"
   },
   {
    "name": "Iowa DNR weekly fishing report (KCHA News)",
    "url": "https://kchanews.com",
    "state": "IA",
    "ok": true,
-   "found": 101,
+   "found": 91,
    "kept": 23,
-   "through": "2026-08-19T18:50:09.020Z",
+   "through": "2026-08-26T19:09:20.345Z",
    "from": "2017-01-01T00:00:00.000Z",
    "complete": true,
-   "ms": 2381,
-   "checked": "2026-11-02T18:50:09.020Z"
+   "ms": 2398,
+   "checked": "2026-11-09T19:09:20.345Z"
   }
  ],
  "robots": [
-  {
-   "url": "https://georgiawildlife.blog/robots.txt",
-   "status": 200,
-   "delay": 0
-  },
   {
    "url": "https://www.agfc.com/robots.txt",
    "status": 200,
@@ -84,12 +79,17 @@
    "delay": 0
   },
   {
-   "url": "https://tpwd.texas.gov/robots.txt",
+   "url": "https://georgiawildlife.blog/robots.txt",
    "status": 200,
    "delay": 0
   },
   {
    "url": "https://kchanews.com/robots.txt",
+   "status": 200,
+   "delay": 0
+  },
+  {
+   "url": "https://tpwd.texas.gov/robots.txt",
    "status": 200,
    "delay": 0
   }
@@ -208,8 +208,8 @@
    ]
   },
   "AR-03": {
-   "reports": 442,
-   "kb": 263.3,
+   "reports": 443,
+   "kb": 263.8,
    "years": [
     2021,
     2026
@@ -248,8 +248,8 @@
    ]
   },
   "AR-08": {
-   "reports": 516,
-   "kb": 285.9,
+   "reports": 521,
+   "kb": 288.6,
    "years": [
     2019,
     2026
@@ -472,8 +472,8 @@
    ]
   },
   "IA-08": {
-   "reports": 274,
-   "kb": 137.9,
+   "reports": 297,
+   "kb": 150,
    "years": [
     2023,
     2026
