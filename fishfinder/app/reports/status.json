@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T06:28:02.086Z",
+ "updated": "2026-11-14T18:07:19.828Z",
  "sources": [
   {
    "name": "Oklahoma Department of Wildlife Conservation",
@@ -8,7 +8,7 @@
    "ok": true,
    "found": 9,
    "kept": 8,
-   "ms": 577
+   "ms": 1947
   },
   {
    "name": "Arkansas Game and Fish weekly fishing report",
@@ -17,7 +17,7 @@
    "ok": true,
    "found": 0,
    "kept": 0,
-   "ms": 254
+   "ms": 250
   },
   {
    "name": "Georgia Wildlife Resources fishing report",
@@ -26,7 +26,7 @@
    "ok": true,
    "found": 24,
    "kept": 12,
-   "ms": 689
+   "ms": 261
   },
   {
    "name": "Tennessee Wildlife Resources Agency",
@@ -35,8 +35,8 @@
    "ok": false,
    "found": 0,
    "kept": 0,
-   "ms": 4429,
-   "error": "fetch failed"
+   "ms": 586,
+   "error": "HTTP 403"
   },
   {
    "name": "Iowa DNR fishing report",
@@ -45,7 +45,7 @@
    "ok": true,
    "found": 40,
    "kept": 40,
-   "ms": 1218
+   "ms": 1327
   },
   {
    "name": "Texas Parks and Wildlife weekly fishing report",
@@ -54,7 +54,7 @@
    "ok": true,
    "found": 98,
    "kept": 0,
-   "ms": 1011
+   "ms": 996
   },
   {
    "name": "South Carolina DNR freshwater fishing trends",
@@ -63,7 +63,7 @@
    "ok": true,
    "found": 11,
    "kept": 11,
-   "ms": 358
+   "ms": 527
   },
   {
    "name": "Indiana DNR fishing reports",
@@ -72,7 +72,7 @@
    "ok": true,
    "found": 13,
    "kept": 7,
-   "ms": 177
+   "ms": 489
   },
   {
    "name": "New York DEC fishing hotline",
@@ -81,7 +81,7 @@
    "ok": true,
    "found": 7,
    "kept": 0,
-   "ms": 909
+   "ms": 2014
   },
   {
    "name": "Kentucky Lake fishing reports",
@@ -90,7 +90,7 @@
    "ok": true,
    "found": 3,
    "kept": 2,
-   "ms": 9180
+   "ms": 3788
   },
   {
    "name": "SportfishingReport.com freshwater",
@@ -99,7 +99,7 @@
    "ok": true,
    "found": 17,
    "kept": 10,
-   "ms": 5203
+   "ms": 3316
   },
   {
    "name": "GON forum: freshwater fishing",
@@ -108,7 +108,7 @@
    "ok": true,
    "found": 30,
    "kept": 7,
-   "ms": 494
+   "ms": 1486
   },
   {
    "name": "Wayne's Words forum (Lake Powell)",
@@ -116,8 +116,8 @@
    "state": "US",
    "ok": true,
    "found": 20,
-   "kept": 2,
-   "ms": 542
+   "kept": 1,
+   "ms": 1233
   },
   {
    "name": "Major League Fishing",
@@ -126,7 +126,7 @@
    "ok": true,
    "found": 10,
    "kept": 8,
-   "ms": 919
+   "ms": 1124
   },
   {
    "name": "Carolina Sportsman",
@@ -135,7 +135,7 @@
    "ok": true,
    "found": 10,
    "kept": 2,
-   "ms": 1715
+   "ms": 1580
   },
   {
    "name": "Crappie NOW",
@@ -144,16 +144,16 @@
    "ok": true,
    "found": 10,
    "kept": 10,
-   "ms": 291
+   "ms": 459
   },
   {
    "name": "Louisiana Sportsman",
    "url": "https://www.louisianasportsman.com/feed/",
    "state": "LA",
    "ok": true,
-   "found": 1,
+   "found": 0,
    "kept": 0,
-   "ms": 931
+   "ms": 903
   },
   {
    "name": "Mississippi Sportsman",
@@ -162,7 +162,7 @@
    "ok": true,
    "found": 3,
    "kept": 2,
-   "ms": 1733
+   "ms": 1271
   },
   {
    "name": "Outdoor News fishing reports",
@@ -171,7 +171,7 @@
    "ok": true,
    "found": 9,
    "kept": 2,
-   "ms": 397
+   "ms": 672
   },
   {
    "name": "Wired2Fish",
@@ -180,7 +180,7 @@
    "ok": true,
    "found": 10,
    "kept": 4,
-   "ms": 167
+   "ms": 175
   }
  ]
 }
